@@ -1,0 +1,99 @@
+.box{
+    display: flex;
+    cursor: pointer;
+    border: 2px solid rgb(255 224 178/1) ;
+    border-radius: 12px;
+    margin: 12px 0;
+    padding: 24px 0;
+}
+.box .icons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 16px  ;
+}
+.box .icons img{
+    width: 4rem;
+    display: none;
+}
+.content{
+    padding:0 20px ;
+}
+.content h1{
+    font-size: 1.25rem;
+    line-height: 1.75rem;
+    font-weight: 500;
+
+}
+.content p {
+    font-size: 16px;
+    color: rgb(66 66 66 /1);
+    font-weight:400;
+    padding: 8px 0;
+}
+.buttons{
+   display: none;
+   justify-content: center;
+   align-items: center;
+   padding: 0 20px;
+}
+.buttons >button{
+    padding: 4px 32px;
+    border-radius: 12px;
+    cursor: pointer;
+    color: white;
+    background-color:rgb(255 152 0/1);
+  font-size: 18px;
+  font-weight: medium;
+}
+.buttons >button:hover{
+    background-color: rgb(235, 150, 22)
+}
+.controls{
+    padding: 10px 30px ;
+    background-color:rgb(255 152 0/1);
+    color:white;
+    cursor: pointer;
+    border-radius:12px ;
+    font-size: larger;
+}
+.controls:hover{
+    background-color: rgb(235, 150, 22)
+}
+.control-contain{
+  display: flex;
+  padding: 10px 14px;
+  float: right;
+}
+
+.Inactive {
+    border: 2px solid rgb(255 152 0/1)
+
+}
+.Inactive .buttons button {
+    background-color:  rgb(255 224 178/1);
+    color:  rgb(255 152 0/1);
+}
+.Inactive .icons .radio{
+    border: 5px solid rgb(255 152 0/1)
+}
+
+
+@media (min-width: 720px) {
+    .box .icons img {
+        display: flex;
+    }
+    .box .icons .radio{
+        display: none;
+    }
+    .buttons{
+        display: flex;
+    }
+}
+
+ .icons .radio{
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    border: 2px solid rgb(255 204 128/1);
+}
