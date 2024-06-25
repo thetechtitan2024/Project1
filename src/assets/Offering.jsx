@@ -1,8 +1,9 @@
+
 export const Offering=[
     {
       id:1,
       heading:"Sign up",
-      content:"Fill in your details at www.tutorbin.com/register to complete the sign-up process."
+      content:`Fill in your details at www.tutorbin.com/register to complete the sign-up process.`
     },
     {
         id:2,

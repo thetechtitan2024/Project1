@@ -1,50 +1,8 @@
-
+import { NavLink } from "react-router-dom"
+ import { Blogsdata  } from "./Pages/BlogData"
 
 function Ourblogs() {
-        const Blogsdata = [
-          {
-            id:1,
-            Images:"https://studybay.com/storage/upload/what_is_botany_preview.webp",
-            heading:"What is Botany About and Should You Study It?",
-            Date:"12/10/2024",
-            Links:"",
-            Alt:"Nature"
-          },
-          {
-            id:2,
-            Images:"https://studybay.com/storage/upload/what_is_botany_preview.webp",
-            heading:"What is Botany About and Should You Study It?",
-            Date:"12/10/2024",
-            Links:"",
-            Alt:"Nature"
-          },
-          {
-            id:3,
-            Images:"https://studybay.com/storage/upload/what_is_botany_preview.webp",
-            heading:"What is Botany About and Should You Study It?",
-            Date:"12/10/2024",
-            Links:"",
-            Alt:"Nature"
-          },
-          {
-            id:4,
-            Images:"https://studybay.com/storage/upload/what_is_botany_preview.webp",
-            heading:"What is Botany About and Should You Study It?",
-            Date:"12/10/2024",
-            Links:"",
-            Alt:"Nature"
-          },
-          {
-            id:5,
-            Images:"https://studybay.com/storage/upload/what_is_botany_preview.webp",
-            heading:"What is Botany About and Should You Study It?",
-            Date:"12/10/2024",
-            Links:"",
-            Alt:"Nature"
-          },
-
-    
-        ]
+      
   return (
     <div className="py-20 bg-gray-50">
     <div className="text-black max-w-[1200px] mx-auto text-center text-4xl font-bold underline pb-16 py-6">
@@ -62,7 +20,11 @@ function Ourblogs() {
             <div className='text-black text-sm font-medium pb-2'>{item.heading}</div>
             <div className='text-black text-xl font-medium pb-2'>{item.heading}</div>
             <div className='text-black text-sm font-normal pb-3'>{item.Date}</div>
-            <div className="flex  "><button className="py-2 px-6 bg-orange-500 rounded-xl">Read More</button></div>        
+            <div className="flex  ">
+            <NavLink reloadDocument to={`/Blogspage/${item.id}`}>
+            <button className="py-2 px-6 bg-orange-500 hover:bg-orange-400 rounded-xl">Read More</button>
+            </NavLink>
+            </div>        
             </div>   
      
               </section>)

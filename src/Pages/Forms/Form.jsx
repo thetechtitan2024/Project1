@@ -3,6 +3,7 @@ import { useState } from "react"
 import PhoneInput from "react-phone-input-2";
 import 'react-phone-input-2/lib/style.css'
 import attach from '../../assets/attach.png'
+import axios from 'axios'
 
 function Form() {
 
@@ -21,12 +22,23 @@ function Form() {
        
     })
     
-    const Increament= ()=>{
+       const Increament= ()=>{
           setCount(count+1)
     }
     const Decreament = () =>{
       if(count>0)
       setCount(count-1)
+    }
+
+    const Savedata = async () =>{
+         await axios.post('http://localhost:3000/api/assignment/Assignment_inputdata',inputData)
+         .then((res)=>{
+          if(res.status === 200){
+            alert("Data Save Sucessfull")
+          }else {
+            alert("Something Error")
+          }
+         })
     }
 
  const handleForm = (e) =>{
@@ -40,6 +52,7 @@ function Form() {
  const handleSubmit = (event) =>{
         event.preventDefault();
         console.log(inputData)
+        Savedata()
  }
   return (
     <div>

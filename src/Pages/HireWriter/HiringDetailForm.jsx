@@ -97,7 +97,7 @@ function HiringDetailForm() {
           </div>
         </div>
         <div className="flex  py-3">
-        <button className="px-3 py-2 bg-orange-300 w-full rounded-xl text-xl">Submit</button>
+        <button type='Submit' className="px-3 py-2 bg-orange-300 w-full rounded-xl text-xl">Next</button>
         </div>
     </form>
        </section>

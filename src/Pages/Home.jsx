@@ -8,6 +8,12 @@ import '../Components/CSS/Style.css'
 import StudentTestimoials from "./StudentStories/StudentTestimoials"
 import CountUp from 'react-countup';
 import FAQs from "../Components/FAQS/FAQs"
+import student from '../assets/student.png'
+import task from '../assets/task.png'
+import technical from '../assets/technical.png'
+import house from '../assets/houseprofee.png'
+import bgtestimonials  from '../assets/testimonialbg.png'
+
 
 function Home() {
 
@@ -110,24 +116,36 @@ const faq = [
     <div className="w-full relative  " id="">
   
       <Hero/>
-      <section className="bg-gradient-to-r max-h-full  from-gray-900  via-orange-500  to-gray-900   py-24 border-y-2">
+      <section className="bg-gradient-to-r max-h-full  from-gray-900  via-orange-500  to-gray-900   py-10 border-y-2">
       
         <ul className="flex flex-wrap justify-evenly py-6 max-w-[1200px] mx-auto">
           <li>
-            <div className="text-2xl  text-center font-bold" ><CountUp end={12958} duration={5} start={1} delay={0} /> </div>
-            <div className="text-lg font-medium" >Student Requests</div>
+          <div className="flex justify-center items-center pb-3" >
+          <img src={student} alt="Student request" className=" w-20 h-20" />
+          </div>
+            <div className="text-3xl  text-center font-bold" ><CountUp end={12958} duration={5} start={1} delay={0} /> </div>
+            <div className="text-xl font-medium" >Student Requests</div>
           </li>
           <li>
-            <div className="text-2xl  text-center font-bold"> <CountUp end={2478} duration={5} start={1} delay={0} /> </div>
-            <div className="text-lg font-medium">Assignments Completed</div>
+            <div className="flex justify-center items-center pb-3">
+            <img src={task} alt="Assignment Completed" className=" w-20 h-20" />
+            </div>
+            <div className="text-3xl  text-center font-bold"> <CountUp end={2478} duration={5} start={1} delay={0} /> </div>
+            <div className="text-xl font-medium">Assignments Completed</div>
           </li>
           <li>
-            <div className="text-2xl  text-center font-bold"><CountUp end={2378} duration={5} start={1} delay={0} /></div>
-            <div className="text-lg font-medium">Technical Projects  </div>
+          <div className="flex justify-center items-center pb-3">
+          <img src={technical} alt="Technical Project" className=" w-20 h-20" />
+          </div>
+            <div className="text-3xl  text-center font-bold"><CountUp end={2378} duration={5} start={1} delay={0} /></div>
+            <div className="text-xl font-medium">Technical Projects  </div>
           </li>
           <li>
-            <div className="text-2xl  text-center font-bold"><CountUp end={1273} duration={5} start={1} delay={0} /></div>
-            <div className="text-lg font-medium">In house professionals</div>
+           <div className="flex justify-center items-center pb-3">
+           <img src={house} alt="In house Professionals" className=" w-20 h-20" />
+           </div>
+            <div className="text-3xl  text-center font-bold"><CountUp end={1273} duration={5} start={1} delay={0} /></div>
+            <div className="text-xl font-medium">In house professionals</div>
           </li>
         </ul>
       
@@ -154,7 +172,7 @@ const faq = [
           </div>
           </section>
 
-          <section className="bg-gray-300">
+          <section className=" bg-no-repeat bg-cover" style={{backgroundImage:`url(${bgtestimonials})`}}>
           <Carousel transition={{ duration:1 }} loop="true" autoplay="true" className="rounded-xl w-full h-auto  py-12 bg-transparent"  >
           {
             Testimonials.map((item,i)=>{
@@ -164,7 +182,7 @@ const faq = [
           </Carousel>
           </section>
           <section className="bg-white py-4">
-          <div className="text-black max-w-[800px] mx-auto px-3 py-2">
+          <div className="text-black max-w-[1200px] mx-auto px-3 py-2" >
              {
               faq.map((item,indx)=>{
                    return <FAQs key={indx} Question={item.question} Answer={item.Answer} />
