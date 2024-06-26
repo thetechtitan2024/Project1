@@ -1,4 +1,16 @@
 .active{
     color: rgb(241, 209, 82);
+    border-bottom: 2px solid rgb(241, 209, 82);
     font-weight: 500;
+}
+.owl-theme  .active {
+  
+    border:none 
+}
+.owl-theme .active.center{
+  
+    
+     border-radius: 12px;
+ 
+ 
 }

@@ -10,32 +10,32 @@ export const Choose = [
         id:1,
         Images:plag,
         Alt:"Logos",
-        heading:"Free plagiarism check",
-        Content:"Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,"
+        heading:"Plagiarism-Free",
+        Content:"We guarantee 100% original, plagiarism-free content tailored to your requirements."
 
     },
     { 
         id:2,
         Images:satisfy,
         Alt:"Logos",
-        heading:"100% satisfaction guarantee",
-        Content:"Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,"
+        heading:"Expert Writers",
+        Content:" Our team of highly qualified writers brings expertise and passion to every assignment."
 
     },
     { 
         id:3,
         Images:confident,
         Alt:"Logos",
-        heading:"100% confidentiality",
-        Content:"Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,"
+        heading:"Timely Delivery",
+        Content:"Count on us to deliver your assignments on time, every time."
 
     },
     { 
         id:4,
         Images:turn,
         Alt:"Logos",
-        heading:"Quick turnaround times",
-        Content:"Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,"
+        heading:"Affordable Pricing",
+        Content:" Enjoy competitive pricing and various discounts for quality academic assistance."
 
     },
     
@@ -43,16 +43,16 @@ export const Choose = [
             id:5,
             Images:work,
             Alt:"Logos",
-            heading:"Work in any citation style you choose",
-            Content:"Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,"
+            heading:"High-Quality Papers",
+            Content:"Receive well-researched, meticulously formatted, and professionally written content."
     
         },
         { 
             id:6,
             Images:quality,
             Alt:"Logos",
-            heading:"High-quality papers",
-            Content:"Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,"
+            heading:"24/7 Support",
+            Content:"Our friendly support team is available around the clock to assist you."
     
         }
     

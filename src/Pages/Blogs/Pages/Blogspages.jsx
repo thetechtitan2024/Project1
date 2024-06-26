@@ -17,9 +17,11 @@ function Blogspages() {
   let options = {
     autoplay: true,
     animateout: "slideOutUP",
+    center:true,
     nav: true,
     dots: true,
-    margin: 0,
+    margin: 17,
+    
     responsive: {
       1100: {
         items: 3,
@@ -44,7 +46,7 @@ function Blogspages() {
   console.log(blogs);
 
   return (
-    <div className=" my-20 text-black reltive bg-gray-50 py-10">
+    <div className=" mt-20 text-black reltive bg-gray-50 py-10">
       {blogs ? (
         <section className="relative lg:max-w-[992px] max-w-[1200px] mx-auto my-0  block ">
           <div className="flex">
@@ -55,23 +57,27 @@ function Blogspages() {
             </NavLink>
           </div>
           {
-            <main>
-              <div className="block relative pb-[66.66%] h-0 overflow-hidden max-w-[1200px]   mx-auto ">
-                <div className="absolute top-0 left-0 right-0 bottom-0  my-6 ">
-                  <img
-                    src={blogs.Images}
-                    alt="taj mahal "
-                    className=" object-fill w-full h-full block aspect-auto"
-                  />
-                </div>
-              </div>
-              <article className="relative bg-white max-w-[842px] mx-auto -mt-40 rounded-xl shadow-2xl ">
+            <main className="py-44">
+            {
+
+           
+              // <div className="block relative pb-[66.66%] h-0 overflow-hidden max-w-[1200px]   mx-auto ">
+              //   <div className="absolute top-0 left-0 right-0 bottom-0  my-6 ">
+              //     <img
+              //       src={blogs.Images}
+              //       alt="taj mahal "
+              //       className=" object-fill w-full h-full block aspect-auto"
+              //     />
+              //   </div>
+              // </div>
+            }
+              <article className="relative bg-white max-w-[1190px] mx-auto -mt-40 rounded-xl shadow-2xl ">
                 <div className="flex flex-col p-8">
                   <header className="md:text-5xl text-[4vmax] font-bold">
                     {blogs.heading}
                   </header>
                   <ul className="flex gap-x-3 py-5">
-                    <li>By Mariellen Ward</li>
+                    <li className=" capitalize">published Mariellen Ward</li>
                     <li className=" "> July 25, 2022</li>
                   </ul>
                   <figure>
@@ -114,14 +120,15 @@ function Blogspages() {
                 </div>
               </article>
 
-              <div className="text-3xl py-7 text-orange-500 font-bold">
+              <div className="text-5xl py-7 text-orange-500 font-bold text-center">
                 Similar Blogs
               </div>
               <OwlCarousel
+              id="Owl-carsouel"
                 loop
                 margin={10}
                 dotsEach
-                className="owl-theme "
+                className="owl-theme"
                 {...options}
               >
                 {Blogsdata.map((item, indx) => {
@@ -133,7 +140,7 @@ function Blogspages() {
                       <div>
                         <img src={item.Images} alt={item.Alt} className="" />
                       </div>
-                      <div className="flex flex-col justify-center] py-3 items-start px-4 ">
+                      <div className="flex flex-col justify-center py-3 items-start px-4 ">
                         <div className="text-black text-sm font-medium pb-2">
                           {item.heading}
                         </div>

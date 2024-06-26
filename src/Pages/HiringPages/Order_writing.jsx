@@ -80,7 +80,7 @@ console.log(orderEditinData)
                 <NavLink to='/order'>
                      <div className={style.controller}>Back</div>
                      </NavLink>
-                     <NavLink to='/Pagescount'>
+                     <NavLink to='/personaldetail'>
                      <div className={style.controller} >Next</div>
                      </NavLink>
                 </div>

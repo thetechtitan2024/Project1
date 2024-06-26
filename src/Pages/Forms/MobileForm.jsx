@@ -5,6 +5,7 @@ import  location from '../../assets/location.png'
 import PhoneInput from "react-phone-input-2";
 import 'react-phone-input-2/lib/style.css'
 import { useState } from 'react';
+import axios from 'axios';
 function MobileForm() {
   const [contactinfo,setContactinfo] = useState({
         firstname:"",
@@ -24,9 +25,25 @@ function MobileForm() {
 
   }
 
+  const SubmitData = async () =>{
+       axios.post('/api/Contactus',contactinfo)
+       .then((res)=>{
+        if(res.status===200){
+          alert("Data sucessfull saved")
+        
+        }else{
+          alert("Somethings worng")
+          
+        }
+       }).catch((err)=>{
+          alert(err)
+       })
+  }
+
   const SubmitContactinfo = (event) =>{
        event.preventDefault();
        console.log(contactinfo)
+       SubmitData();
   }
 
   return (

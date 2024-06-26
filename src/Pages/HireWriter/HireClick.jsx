@@ -5,28 +5,28 @@ import { NavLink } from "react-router-dom";
 function HireClick() {
   const [writing, setWriting] = useState(true);
   const [editing, setEditing] = useState(false);
-  const [technical, setTechnical] = useState(false);
-  const [Link,setLink] = useState('/order-writing/personaldetail')
+  // const [technical, setTechnical] = useState(false);
+  const [Link,setLink] = useState('/order-writing')
   const handleSelect = (name) =>{
     console.log(name)
        if(name === "writing"){
         setWriting(true)
         setEditing(false)
-        setTechnical(false)
-        setLink('/order-writing/personaldetail')
+        // setTechnical(false)
+        setLink('/order-writing')
        }
        else if(name === "editing"){
         setWriting(false)
         setEditing(true)
-        setTechnical(false)
-        setLink('/order-editing/personaldetail')
+        // setTechnical(false)
+        setLink('/order-editing')
        }
-       else if(name === "technical"){
-        setWriting(false)
-        setEditing(false)
-        setTechnical(true)
-        setLink('/order-technical/personaldetail')
-       }
+      //  else if(name === "technical"){
+      //   setWriting(false)
+      //   setEditing(false)
+      //   setTechnical(true)
+      //   setLink('/order-technical')
+      //  }
   }
   return (
     <div className="grid lg:grid-cols-1 py-10 lg:px-3 px-10 max-w-[700px] mx-auto">
@@ -69,22 +69,25 @@ function HireClick() {
               <button onClick={()=>{handleSelect('editing')}}>{editing?"Selected":"Select"}</button>
             </div>
           </li>
+{
 
-          <li className={technical?"Inactive box":"box"} onClick={()=>{handleSelect('technical')}}>
-            <div className="icons">
-              <img src={write} alt="" />
-              <span className='radio'></span>
-            </div>
-            <div className="content">
-              <h1 className="">Technical</h1>
-              <p className="">
-              Get an expert’s help with math problems, data analysis, coding, labs, accounting, etc.
-              </p>
-            </div>
-            <div className="buttons">
-              <button className=""onClick={()=>{handleSelect('technical')}}>{technical?"Selected":"Select"}</button>
-            </div>
-          </li>
+
+          // <li className={technical?"Inactive box":"box"} onClick={()=>{handleSelect('technical')}}>
+          //   <div className="icons">
+          //     <img src={write} alt="" />
+          //     <span className='radio'></span>
+          //   </div>
+          //   <div className="content">
+          //     <h1 className="">Technical</h1>
+          //     <p className="">
+          //     Get an expert’s help with math problems, data analysis, coding, labs, accounting, etc.
+          //     </p>
+          //   </div>
+          //   <div className="buttons">
+          //     <button className=""onClick={()=>{handleSelect('technical')}}>{technical?"Selected":"Select"}</button>
+          //   </div>
+          // </li>
+}
         </ul>
         <div className="control-contain">
            <NavLink reloadDocument to={Link}>

@@ -65,7 +65,7 @@ console.log(orderTechnicalData)
                 <NavLink to='/order'>
                 <div className={style.controller}>Back</div>
                 </NavLink>
-                <NavLink to='/Deadline'>
+                <NavLink to='/personaldetail'>
                 <div className={style.controller}>Next</div>
                 </NavLink>
                 </div>

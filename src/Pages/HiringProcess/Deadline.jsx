@@ -9,7 +9,6 @@ function Deadline() {
     const [days1,setDays1] = useState(true);
     const [days2,setDays2] = useState(false);
     const [days3,setDays3] = useState(false);
-    
     const date = new Date();
     const month = ["January","February","March","April","May","June","July","August","September","October","November","December"];
     const [months,setmonth] = useState(date.getMonth())

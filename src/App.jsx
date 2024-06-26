@@ -15,13 +15,11 @@ import Home from './Pages/Home'
 import {Route, Routes} from 'react-router-dom'
 import Serviceshome from './Pages/Services/Serviceshome'
 import Blogspages from './Pages/Blogs/Pages/Blogspages'
-
 function App() {
-
   return (
-   
     <div className=''>    
     <Navbar/>
+  
      <Routes >
            <Route path='/' element={<Home/>}/>
            <Route path='/*' element={<Home/>}/>
@@ -33,12 +31,12 @@ function App() {
            <Route path='/order-editing' element={<Order_editing/>}/>
            <Route path='/Pagescount' element={<PagesCount/>}/>
            <Route path='/Deadline' element={<Deadline/>}/>
-           <Route path='/order-editing/personaldetail' element={<HiringDetailForm/>}/>
+           <Route path='/personaldetail' element={<HiringDetailForm/>}/>
            <Route path='/order-technical/personaldetail' element={<HiringDetailForm/>}/>
            <Route path='/order-writing/personaldetail' element={<HiringDetailForm/>}/>
-           <Route path='/Services' element={<Serviceshome/>} />
+           <Route path='/Services/:Link' element={<Serviceshome/>} />
            <Route path='/Blogspage/:id' element={<Blogspages/>}/>
-     </Routes>
+             </Routes>
 
     <Footer/>
     </div>

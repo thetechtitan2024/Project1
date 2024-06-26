@@ -2,13 +2,29 @@
 
 import { useState } from 'react';
 import style from '../../CSS/Style.module.css'
-import { NavLink } from 'react-router-dom'
+import { NavLink, useNavigate } from 'react-router-dom'
+import axios from 'axios';
+
 function Order_editing() {
+     const navigate = useNavigate();
   const [orderEditinData,setOrderEditingData] = useState({
             subject:"",
             attachment:"",
             instruction:""
-  })       
+  })   
+  const Submitdata = () =>{
+         axios.post('/api/orderediting',orderEditinData)
+         .then((res)=>{
+           if(res.status === 200){
+               alert("Data Save Sucessfully")
+             navigate('/personaldetail');
+
+           }
+         })
+         .catch((err)=>{
+          alert(err)
+         })
+    }    
   const handleInput = (e) => {
        const {name,value}=e.target;
        setOrderEditingData((prev)=>({
@@ -19,6 +35,7 @@ function Order_editing() {
   const handleSubmit = (event) =>{
        event.preventDefault()
        console.log(orderEditinData)
+       Submitdata()
        
   }
   const textareadesc = "Mention your topic, main idea, and requirements like tone of voice, structure, glossary, formatting style, or notes from your professor.";
@@ -58,16 +75,16 @@ function Order_editing() {
                    <textarea  name="instruction" rows='4' id="" required placeholder={textareadesc} value={orderEditinData.instruction} onChange={handleInput}></textarea>
                 </div>
 
-                </form>
+             
 
                 <div className={style.control_button}>
                 <NavLink to='/order'>
                 <div className={style.controller}>Back</div>
                 </NavLink>
-                <NavLink to='/order-editing/personaldetail'>
-                <div className={style.controller}>Next</div>
-                </NavLink>
+      
+                <div ><button className={style.controller} type='submit'>Next</button></div>
                 </div>
+                </form>
            </div>
       
       </section>

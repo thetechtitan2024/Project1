@@ -31,7 +31,7 @@ function Form() {
     }
 
     const Savedata = async () =>{
-         await axios.post('http://localhost:3000/api/assignment/Assignment_inputdata',inputData)
+         await axios.post('/api/Assignment_inputdata',inputData)
          .then((res)=>{
           if(res.status === 200){
             alert("Data Save Sucessfull")
@@ -148,7 +148,7 @@ function Form() {
                 </textarea>
                   <div className="w-auto relative cursor-pointer py-1 px-6">
                   <h1 className=" cursor-pointer opacity-100 font-medium flex  w-auto "> <span><img src={attach} alt="" className="w-6 cursor-pointer z-10" /></span> Attach file</h1>
-                  <input type="file" name="Attach" className=" absolute cursor-pointer w-[100px] h-auto  top-0 opacity-0 max-h-12  z-[9]" multiple value={inputData.Attach} onChange={handleForm}  />
+                  <input type="file" name="Attach" className=" absolute cursor-pointer w-[100px] h-auto  top-0 opacity-0 max-h-12  z-[9]" multiple  onChange={e=>setInputdata({...inputData,Attach:e.target.files})}  />
                   </div>
                   </div>
                

@@ -3,6 +3,7 @@ import PhoneInput from "react-phone-input-2";
 import countryList from 'react-select-country-list'
 import { useMemo, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
+import axios from 'axios'
 
 function HiringDetailForm() {
       const navigate = useNavigate()
@@ -19,7 +20,23 @@ function HiringDetailForm() {
     }
 )
      
-  
+  const SubmitData  = async() =>{
+         await axios.post('/api/usersinfo',inputData)
+         .then((res)=>{
+          if(res.status ===  200){
+            alert('Data Save Sucessfull')
+            const text="Are you Sure";
+            if(confirm(text)){
+              navigate('/Pagescount')
+            }
+          }else{
+            alert('Somethings Wrong data Not Saved')
+          }
+         })
+         .catch((err)=>{
+          alert(err)
+         })
+  } 
     
 
       const handleform = (event) =>{
@@ -32,10 +49,8 @@ function HiringDetailForm() {
     const handleSubmit = (e) =>{
         e.preventDefault();
         console.log(inputData)
-        const text="Are you Sure";
-        if(confirm(text)){
-          navigate('/Pagescount')
-        }
+        SubmitData()
+       
     }
   return (
     <div>

@@ -14,7 +14,10 @@ function ServiceTestimoial(props) {
     <div className=' font-bold md:px-20 px-3 '>
          <p className='lg:text-xl font-medium lg:leading-8'>{props.Content}</p> 
          <div className='flex gap-x-5 py-5'>
-          <div className="w-20 h-20 bg-gray-500 rounded-full border-2 border-black"><img src="" alt="" /></div>
+         {
+
+          //  <div className="w-20 h-20 bg-gray-500 rounded-full border-2 border-black"><img src="" alt="" /></div>
+         }
          <div className=' py-5  text-xl'>
          <p >{props.Name}</p>
          <p>{props.NameTitle}</p>
