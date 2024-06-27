@@ -27,12 +27,14 @@ function Serviceshome() {
               
                 <div  className="">
                   <section className="mt-24 flex flex-wrap max-w-[1200px] mx-auto text-black  pt-7">
-                  <div className=" md:w-2/3  ">
+                  <div className=" md:w-2/3 max-w-full  ">
                   <h1 className=" text-6xl leading-tight capitalize font-bold not-italic mb-4 px-4">
                     Get The{" "}
-                    <span className=" text-orange-500">Best Programming </span> Help
+                    <span className=" text-orange-500 break-words">Best Programming </span> Help
                   </h1>
-                     <p className=" text-xl font-medium leading-9  text-justify mb-4 text-gray-700  px-5">{data.Heading}</p>
+                  
+                  <p className=" text-xl font-medium leading-9 h-auto text-justify mb-4 text-gray-700  px-5">{data.Heading}</p>
+               
                      </div>
                      <div className=" md:w-1/3 w-full pb-3 pt-5  flex justify-center items-center">
                      <img
@@ -54,7 +56,7 @@ function Serviceshome() {
                        on time. The various languages covered in our programming
                        assignment service mainly include:
                      </p>
-                     <ul className=" list-disc pl-10 text-justify">
+                     <ul className=" list-disc px-10 text-justify">
                      {
                       data.Lists.map((item,indx)=>{
                         return  <li key={indx} className="text-xl py-3 font-normal">
@@ -91,7 +93,7 @@ function Serviceshome() {
           className=" py-3 bg-cover"
           style={{ backgroundImage: `url(${bgtestimonials})` }}
         >
-          <div className="text-white text-center text-6xl font-bold ">
+          <div className="text-white text-center md:text-6xl text-4xl break-words font-bold ">
             Our Testimonials
           </div>
           {
