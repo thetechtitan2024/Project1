@@ -6,7 +6,7 @@ function Hero() {
 
   return (
     <div className="pt-20">
-    <p className=" font-bold md:text-7xl text-[5vmax] text-center leading-tight    bg-gradient-to-r lg:px-0  py-8   from-orange-600 max-h-full to-gray-800 w-full  text-transparent bg-clip-text">#1 Assignment Help ! </p>
+    <p className=" font-bold md:text-7xl text-[3.5vmax] break-words text-center leading-tight    bg-gradient-to-r lg:px-0  py-8   from-orange-600 max-h-full to-gray-800 w-full  text-transparent bg-clip-text">#1 Assignment Help ! </p>
         <section className=" lg:grid flex lg:grid-cols-2 flex-col-reverse justify-between w-full mx-auto pb-8 pt-4 gap-10 2xl:max-w-[1350px] xl:max-w-[1191px] lg:max-w-[95%] max-w-[95%] ">
         <div className="w-full lg:px-0  pt-1 xl:max-w-[100%] relative h-auto flex flex-col mx-auto ">
        <div className="px-4 flex flex-col justify-center ">

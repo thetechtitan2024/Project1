@@ -84,7 +84,7 @@ function Home() {
           </section>
 
           <section className=" bg-no-repeat bg-cover" style={{backgroundImage:`url(${bgtestimonials})`}}>
-          <div className="text-white text-center text-7xl font-bold pt-3"> Testimonials</div>
+          <div className="text-white text-center md:text-7xl text-4xl font-bold pt-3"> Testimonials</div>
           <Carousel transition={{ duration:1 }} loop="true" autoplay="true" className="rounded-xl w-full h-auto  pt-5 pb-12 bg-transparent"  >
           {
             Testimonials.map((item,i)=>{
