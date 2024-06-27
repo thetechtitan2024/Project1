@@ -1,24 +1,24 @@
 import Form from "./Forms/Form"
 import mark from "../assets/mark.png"
-
+import home from '../assets/home.jpg'
 function Hero() {   
  
 
   return (
-    <div className="pt-20">
+    <div className="pt-20 bg-no-repeat bg-cover text-white"  style={{backgroundImage:`url(${home})`}} >
     <p className=" font-bold md:text-7xl text-[3.5vmax] break-words text-center leading-tight    bg-gradient-to-r lg:px-0  py-8   from-orange-600 max-h-full to-gray-800 w-full  text-transparent bg-clip-text">#1 Assignment Help ! </p>
-        <section className=" lg:grid flex lg:grid-cols-2 flex-col-reverse justify-between w-full mx-auto pb-8 pt-4 gap-10 2xl:max-w-[1350px] xl:max-w-[1191px] lg:max-w-[95%] max-w-[95%] ">
+        <section className=" lg:grid flex lg:grid-cols-2 flex-col-reverse justify-between w-full mx-auto pb-8 pt-4 gap-10 2xl:max-w-[1350px] xl:max-w-[1191px] lg:max-w-[95%] max-w-[95%] " >
         <div className="w-full lg:px-0  pt-1 xl:max-w-[100%] relative h-auto flex flex-col mx-auto ">
        <div className="px-4 flex flex-col justify-center ">
        
        <div className="">
-       <h1 className="text-lg text-gray-500 ">Find expert academic writers for your assignments. Get 100% plagiarism-free work. worldoassignment offers 24/7 study help at affordable prices!</h1>
+       <h1 className="text-lg text-gray-50 ">Find expert academic writers for your assignments. Get 100% plagiarism-free work. worldoassignment offers 24/7 study help at affordable prices!</h1>
        </div>
         </div>
        
     { 
          <section className="relative">
-        <ul className="md:flex justify-between text-black   lg:px-4 md:px-3">
+        <ul className="md:flex justify-between    lg:px-4 md:px-3">
           <div className="flex flex-col gap-y-3 ">
             <li className="flex items-center gap-x-2"><img src={mark} alt="" className=" w-5 h-5"/><p>Plagiarism-Free</p></li>
             <li className="flex  items-center gap-x-2 "><img src={mark} alt="" className=" w-5 h-5"/><p>Expert Writers</p></li>

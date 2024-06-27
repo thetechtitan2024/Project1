@@ -2,6 +2,7 @@ import { useState } from "react";
 import write from "../../assets/Hire/write.png";
 import "./Style.css";
 import { NavLink } from "react-router-dom";
+
 function HireClick() {
   const [writing, setWriting] = useState(true);
   const [editing, setEditing] = useState(false);
@@ -29,7 +30,7 @@ function HireClick() {
       //  }
   }
   return (
-    <div className="grid lg:grid-cols-1 py-10 lg:px-3 px-10 max-w-[700px] mx-auto">
+    <div className="grid lg:grid-cols-1 py-10 lg:px-3 px-10 max-w-[700px] mx-auto"  >
       <section className="pt-20 text-black ">
         <div className="">
           <h1 className="text-2xl font-bold "> Select Your Order Type</h1>

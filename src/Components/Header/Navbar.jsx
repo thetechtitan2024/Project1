@@ -77,10 +77,10 @@ const sidebar = <aside className="lg:hidden top-0 left-0 right-0 text-black mx-0
     <div className="w-full ">
      <div className="flex items-center flex-col">
   <header className={position?"shadow-xl z-50 h-20 fixed w-full top-5 max-w-[70%] transition-all duration-500 ease-out rounded-full bg-gray-100":"shadow-xl z-50 h-20 fixed w-full bg-white "}>
-  <nav className={position?'flex justify-between  items-center h-full text-black ':"flex justify-between max-w-[1300px] mx-auto items-center h-full px-10 text-black"}>
+  <nav className={position?'flex justify-between px-4 items-center h-full text-black ':"flex justify-between max-w-[1300px] mx-auto items-center h-full px-10 text-black"}>
   <div className="flex">
   <div className=''><img src={worldologo} alt="worldo Assignment" width='360' /></div>
-  <ul className='lg:flex w-full justify-center items-center hidden gap-x-10'>
+  <ul className='lg:flex w-full justify-center items-center hidden gap-x-5'>
   <NavLink reloadDocument  to='/' >
   <li  className=" cursor-pointer font medium text-xl">Home</li>
   </NavLink>
@@ -96,7 +96,7 @@ const sidebar = <aside className="lg:hidden top-0 left-0 right-0 text-black mx-0
     </ul>
   </div>
   <div>
-    <ul className="lg:flex w-full hidden gap-x-6">
+    <ul className="lg:flex w-full hidden gap-x-4">
     <li><NavLink reloadDocument to='/contact-us'>
   <button className="py-3 px-5 bg-gradient-to-r from-orange-800 to-yellow-700   rounded-xl text-black text-sm  font-medium">Contact Us</button>
   </NavLink></li>

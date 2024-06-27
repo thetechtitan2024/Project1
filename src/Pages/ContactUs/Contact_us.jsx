@@ -1,11 +1,12 @@
 // import Forms from "./Contact_usForm"
 // import message from '../../assets/email.png'
 //  import location from '../../assets/location.png'
- import style from '../../CSS/Style.module.css'
+//  import style from '../../CSS/Style.module.css'
 import MobileForm from '../Forms/MobileForm'
+import wave from '../../assets/wave.jpg'
 function Contact_us() {
   return (
-    <div className={style.pattern}>
+    <div className='bg-no-repeat bg-cover' style={{backgroundImage:`url(${wave})`}}>
    
     <div className='z-50' >
     <div className='pt-36 max-w-[1200px] mx-auto justify-between items-center  py-10 text-white'>

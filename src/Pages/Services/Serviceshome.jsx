@@ -28,7 +28,7 @@ function Serviceshome() {
                 <div  className="">
                   <section className="mt-24 flex flex-wrap max-w-[1200px] mx-auto text-black  pt-7">
                   <div className=" md:w-2/3 max-w-full  ">
-                  <h1 className=" text-6xl leading-tight capitalize font-bold not-italic mb-4 px-4">
+                  <h1 className=" md:text-6xl text-4xl leading-tight capitalize font-bold not-italic mb-4 px-4">
                     Get The{" "}
                     <span className=" text-orange-500 break-words">Best Programming </span> Help
                   </h1>
@@ -48,14 +48,18 @@ function Serviceshome() {
                    <section className="py-7 text-black bg-gray-300 ">
                    <div className="max-w-[1200px] mx-auto">
                      <h1 className="text-4xl font-normal text-black text-center pb-3">
-                       Languages covered
+                      Solutions
                      </h1>
-                     <p className="text-xl pb-5  text-justify">
-                       Our ASA experts aim to offerthe best programming help for
-                       different programming assignments. Just name it; you will get it
-                       on time. The various languages covered in our programming
-                       assignment service mainly include:
-                     </p>
+                     {
+
+                     
+                    //  <p className="text-xl pb-5 px-2 text-justify">
+                    //    Our ASA experts aim to offerthe best programming help for
+                    //    different programming assignments. Just name it; you will get it
+                    //    on time. The various languages covered in our programming
+                    //    assignment service mainly include:
+                    //  </p>
+                     }
                      <ul className=" list-disc px-10 text-justify">
                      {
                       data.Lists.map((item,indx)=>{
@@ -67,7 +71,7 @@ function Serviceshome() {
                      }                     
                                         
                      </ul>
-                     <p className="text-xl py-3 font-normal text-justify">
+                     <p className="text-xl py-3 font-normal text-justify px-2">
                      Get in touch with us and get the best grades by getting help from
                      our programming assignment services.
                      </p>

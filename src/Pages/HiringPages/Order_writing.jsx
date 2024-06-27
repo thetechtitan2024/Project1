@@ -1,28 +1,86 @@
 /* eslint-disable react/no-unescaped-entities */
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import style from '../../CSS/Style.module.css'
-import { NavLink } from 'react-router-dom'
+import { NavLink, useNavigate } from 'react-router-dom'
+import axios from 'axios'
 function Order_writing() {
+
+const navigate = useNavigate()
+  const [pageCount,setPageCount] = useState(1)
+  const date = new Date();
+
+  const month = ["January","February","March","April","May","June","July","August","September","October","November","December"];
+  const [months,setmonth] = useState(date.getMonth())
+  const [day,setDate] = useState(date.getDate()+1)
+  const [year,setYear] = useState(date.getFullYear())
+  const [hour,setHour] = useState("11:00 AM")
+  
+  const Pageincrement = () =>{
+      setPageCount(pageCount+1);
+  }
+  const Pagedecreament = () =>{
+      if(pageCount > 1){
+          setPageCount(pageCount-1)
+      }
+  }
   const [orderEditinData,setOrderEditingData] = useState({
     subject:"",
     attachment:"",
-    instruction:""
-})       
+    instruction:"",
+    typeofpaper:"",
+    others:"",
+    deadline:"2024-07-01T11:35",
+    pageCount:pageCount
+})     
+const [selectother,setSelectother] = useState(false)
+
+async function onSubmitData () {
+ await axios.post('/api/orderwriting',orderEditinData)
+ .then((res)=>{
+  if(res.status === 200){
+    navigate('/personaldetail')
+  }
+ })
+ .catch((err)=>{
+  alert(err)
+ })
+ 
+}
+
+
+useEffect(()=>{
+  setHour(`${(orderEditinData.deadline.slice(11,16))}`)
+  setmonth(parseInt(orderEditinData.deadline.slice(5,7)-1))
+  setDate(`${(orderEditinData.deadline.slice(8,10))}`)
+  setYear(`${(orderEditinData.deadline.slice(0,4))}`)
+  console.log(orderEditinData.deadline)
+  if(orderEditinData.typeofpaper == 'others'){
+    setSelectother(true)
+  }else{
+    setSelectother(false)
+  }
+
+},[orderEditinData.deadline,orderEditinData])
+
 const handleInput = (e) => {
 const {name,value}=e.target;
 setOrderEditingData((prev)=>({
 ...prev,
 [name]:value
 }))
+
+
+
 }
 const handleSubmit = (event) =>{
 event.preventDefault()
 console.log(orderEditinData)
+onSubmitData();
 
 }
   const textareadesc = "Mention your topic, main idea, and requirements like formatting style, references, structure, examples or notes from your professor.";
   return (
-    <div className={style.Main}>
+    <div className={style.Main} >
       <section className={style.Container}>
            <div className={style.Form_field}>
                 <div className={style.heading}>
@@ -32,61 +90,82 @@ console.log(orderEditinData)
                 <form className={style.Form} onSubmit={handleSubmit}>
                 <div className='pb-7'>
                 <label htmlFor="" className='text-sm'>Type of Paper</label>
-                <div className="flex">
-                <select name="" id="" className={style.Input} required>
-                <option value="20">Essay (Any Type)</option>
-                <option value="101">Admission Essay</option>
-                <option value="10">Annotated Bibliography</option>
-                <option value="106">Application Essay</option>
-                <option value="12">Argumentative essay</option>
-                <option value="110">Article (Any Type)</option>
-                <option value="83">Article Review</option>
-                <option value="19">Assignment</option>
-                <option value="34">Book/Movie Review</option>
-                <option value="103">Capstone project</option>
+                <div className="flex ">
+                <select  id="" name='typeofpaper' className={style.Input} required value={orderEditinData.typeofpaper} onChange={handleInput}>
+                <option >Select Options</option>
+                <option  >Essay (Any Type)</option>
+                <option>Admission Essay</option>
+                <option>Annotated Bibliography</option>
+                <option >Application Essay</option>
+                <option >Argumentative essay</option>
+                <option >Article (Any Type)</option>
+                <option >Article Review</option>
+                <option >Assignment</option>
+                <option >Book/Movie Review</option>
+                <option >Capstone project</option>
+                <option >others</option>
                 </select>
+                </div>
+                <div className='flex'>
+                {
+                  selectother&&
+                  <input name="others" id="" placeholder='type of paper' className={style.Input} required value={orderEditinData.others} onChange={handleInput}/>
+                }
                 </div>
                 </div>
                 <div className='pb-6'>
                 <label htmlFor="" className='text-sm'>Subject</label>
                 <div className="flex">
-                <select name="subject" id="" className={style.Input} required value={orderEditinData.subject} onChange={handleInput}>
-                <option value="20">Accounting</option>
-                <option value="101">Algebra</option>
-                <option value="10">Biology</option>
-                <option value="106">Calculas</option>
-                <option value="12">Chemistry</option>
-                <option value="110">Coading</option>
-                <option value="83">Computer Science</option>
-                <option value="19">Economics</option>
-                <option value="34">Engineering</option>
-                     <option value="103">Excel</option>
-                     </select>
+                <input name="subject" id="" placeholder='Subjects' className={style.Input} required value={orderEditinData.subject} onChange={handleInput}/>
+              
                      </div>
                      </div>
                    
                 <div className='py-2 text-sm '>Instruction</div>
                 <div className={style.textarea}>
-                   <textarea  name="instruction" rows='4' id="" placeholder={textareadesc} value={orderEditinData.instruction} required></textarea>
+                   <textarea  name="instruction" rows='4' id="" placeholder={textareadesc} value={orderEditinData.instruction} required onChange={handleInput}></textarea>
                 </div>
 
                 <div className={style.attach}>
                        <div>Attach files</div>
                        <input type="file" name='attachment' value={orderEditinData.attachment} onChange={handleInput}/>
+                       </div>
+                       <h1 className=' px-3 text-orange-500'>{orderEditinData.attachment}</h1>
+                       
+              <div className='block'>
+                <h1 className='text-sm py-2' >Page count</h1>
+                <div className='flex gap-x-3 py-2'>
+                <div onClick={Pagedecreament} className='py-1 px-6 text-2xl font-medium flex items-center justify-center text-orange-700 rounded-lg bg-orange-50 hover:border-2 cursor-pointer border-orange-600'>&#x2212;</div>
+                <input className='py-1 px-5 text-center border-2 text-2xl font-normal w-20  bg-white text-black rounded-lg flex justify-center items-center border-orange-100' name='pageCount' value={orderEditinData.pageCount = pageCount} disabled onChange={handleInput}/>
+                <div onClick={Pageincrement} className='py-1 px-6 text-2xl font-bold text-orange-700 rounded-lg bg-orange-50 hover:border-2 border-orange-600 cursor-pointer'>&#x2b;</div>
                 </div>
-                </form>
-
-                <div className={style.control_button}>
+                <div className='border-l-2 border-orange-500 pl-3 mb-4'>
+                <span className='text-lg font-medium'>{pageCount}</span> <span> double-spaced pages are</span><span className='text-lg font-medium px-2'>{pageCount*275}</span><span>words.</span>
+               </div>
+               </div>
+               <h1>deadline</h1>
+               <div className='flex  gap-3 pb-4  relative'>
+                   <input type="datetime-Local"  className=' w-full h-12 bg-white px-3 border-2 border-orange-300 rounded-xl '  name='deadline' value={orderEditinData.deadline} defaultChecked={date.toISOString().split('T')[0] } onChange={handleInput}  data-last-active-input/>
+       
+                   </div>
+                   <div className='border-l-2 border-orange-500 pl-3 mb-10'>
+                   <span>Your chosen deadline:</span> <span className='font-medium'>{hour}</span>  on <span className='font-medium'>{month[months]} {day}, {year}</span>.
+                 </div>
+                 <div className={style.control_button}>
                 <NavLink to='/order'>
                      <div className={style.controller}>Back</div>
                      </NavLink>
-                     <NavLink to='/personaldetail'>
-                     <div className={style.controller} >Next</div>
-                     </NavLink>
+                    
+                     <button className={style.controller} >Next</button>
+                     
                 </div>
+                </form>
+                 
+                
            </div>
       
       </section>
+    
     </div>
   )
 }
