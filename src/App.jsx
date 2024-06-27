@@ -9,8 +9,7 @@ import HiringDetailForm from './Pages/HireWriter/HiringDetailForm'
 import Order_Technical from './Pages/HiringPages/Order_Technical'
 import Order_editing from './Pages/HiringPages/Order_editing'
 import Order_writing from './Pages/HiringPages/Order_writing'
-import Deadline from './Pages/HiringProcess/Deadline'
-import PagesCount from './Pages/HiringProcess/PagesCount'
+
 import Home from './Pages/Home'
 import {Route, Routes} from 'react-router-dom'
 import Serviceshome from './Pages/Services/Serviceshome'
@@ -29,9 +28,7 @@ function App() {
            <Route path='/order-writing' element={<Order_writing/>}/>
            <Route path='/order-technical' element={<Order_Technical/>}/>
            <Route path='/order-editing' element={<Order_editing/>}/>
-           <Route path='/Pagescount' element={<PagesCount/>}/>
-           <Route path='/Deadline' element={<Deadline/>}/>
-           <Route path='/personaldetail' element={<HiringDetailForm/>}/>
+            <Route path='/personaldetail' element={<HiringDetailForm/>}/>
            <Route path='/order-technical/personaldetail' element={<HiringDetailForm/>}/>
            <Route path='/order-writing/personaldetail' element={<HiringDetailForm/>}/>
            <Route path='/Services/:Link' element={<Serviceshome/>} />

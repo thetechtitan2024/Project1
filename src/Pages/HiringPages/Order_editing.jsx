@@ -54,11 +54,7 @@ function Order_editing() {
    },[orderEditinData.deadline])
    
    async function onSubmitData () {
-        await axios.post('/api/orderediting',formdata,{
-          headers:{
-               'Content-Type': 'multipart/form-data'
-          }
-        })
+        await axios.post('/api/orderediting',formdata)
         .then((res)=>{
           if(res.status === 200){
                const text="Are you sure";
