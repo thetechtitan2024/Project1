@@ -49,11 +49,11 @@ function MobileForm() {
   return (
      <div>
          <section className="flex flex-wrap md:justify-between max-w-[900px] justify-center  mx-auto px-3 " > 
-           <div className='text-black'>
+           <div className='text-black shadow-xl rounded-xl overflow-hidden '>
 
                   <img src={gmail} alt="" />
-                <div>
-                <h1 className="text-3xl font-medium py-4 border-b-2 border-black">Get in Touch</h1>
+                <div className='px-3'>
+                <h1 className="text-3xl font-medium py-4 border-b-2 border-black ">Get in Touch</h1>
                 <ul className='pt-4'>
                 <li className='py-1 flex items-center font-mmedium ' ><span > <img className='w-6 pr-3' src={calling} alt="" /> </span><span>+91 1234567890</span></li>
                 <li className='py-1 flex items-center font-mmedium '> <span > <img className='w-6 pr-3' src={email} alt="" /> </span><span>Test@gmail.com</span></li>
@@ -61,17 +61,17 @@ function MobileForm() {
                 </ul>
                 </div>
            </div>
-          <form action="" className="bg-gray-100 border-2 w-[400px] text-black px-10 shadow-xl rounded-xl py-5  " onSubmit={SubmitContactinfo}>
+          <form action="" className="bg-white border-2 w-[400px] text-black px-10 shadow-xl rounded-xl py-5  " onSubmit={SubmitContactinfo}>
                <div className="flex flex-col relative">
                   <label htmlFor="" className="top-1 left-3 text-black ">First Name <span className="text-red-800">*</span></label>
                   <div className="flex">
-                  <input type="text" name="firstname" className="px-3 w-full bg-gray-100 h-10 rounded-xl border-2 border-black" value={contactinfo.firstname} onChange={Contactinfodata} required />
+                  <input type="text" name="firstname" className="px-3 w-full bg-white h-10 rounded-xl border-2 border-black" value={contactinfo.firstname} onChange={Contactinfodata} required />
                   </div>
                 </div>
                 <div className="flex flex-col relative">
                   <label htmlFor="" className="top-1 left-3 text-black ">Last Name <span className="text-red-800">*</span></label>
                   <div className="flex">
-                  <input type="text" name="lastname" className="px-3 w-full bg-gray-100 h-10 rounded-xl border-2 border-black" required value={contactinfo.lastname} onChange={Contactinfodata} />
+                  <input type="text" name="lastname" className="px-3 w-full bg-white h-10 rounded-xl border-2 border-black" required value={contactinfo.lastname} onChange={Contactinfodata} />
                   </div>
                 </div>
                 <div className="flex flex-col relative">
@@ -97,18 +97,18 @@ function MobileForm() {
                 <div className="flex flex-col relative">
                   <label htmlFor="" className="top-1 left-3 text-black ">Email <span className="text-red-800">*</span></label>
                   <div className="flex">
-                  <input type="email" name="email" className="px-3 w-full bg-gray-100 h-10 rounded-xl border-2 border-black" value={contactinfo.email} onChange={Contactinfodata} required/>
+                  <input type="email" name="email" className="px-3 w-full bg-white h-10 rounded-xl border-2 border-black" value={contactinfo.email} onChange={Contactinfodata} required/>
                   </div>
                 </div>
                 <div className="flex flex-col relative ">
 
                   <label htmlFor="" className="top-1 left-3 text-black ">Message <span className="text-red-800 ">*</span></label>
                   <div className="flex">
-                  <textarea name="message" rows="5" id="" className="w-full px-3 py-2 bg-gray-100 rounded-xl border-2 border-black" required value={contactinfo.message} onChange={Contactinfodata}></textarea>
+                  <textarea name="message" rows="5" id="" className="w-full px-3 py-2 bg-white rounded-xl border-2 border-black" required value={contactinfo.message} onChange={Contactinfodata}></textarea>
                   </div>
                 </div>
                 <div className="flex  py-3">
-                <button className="px-3 py-2 bg-orange-300 w-full rounded-xl">Send Message</button>
+                <button className="px-3 py-2 bg-gradient-to-r from-orange-800 to-yellow-700 w-full rounded-xl">Send Message</button>
                 </div>
             </form>
          </section>

@@ -1,7 +1,7 @@
 import { Carousel } from "@material-tailwind/react";
 import ServiceTestimoial from "./Testimonial";
 import FAQs from "../../Components/FAQS/FAQs";
-import bgtestimonials from "../../assets/testimonialbg.png";
+import bgtestimonials from "../../assets/Banner.jpg";
 import { Testimonials } from "../../assets/Testimonials";
 import { Faqs as faq } from "../../assets/Faqs";
 import { ServicesDataPages } from "./ServicesDataPages";
@@ -29,8 +29,7 @@ function Serviceshome() {
                   <section className="mt-24 flex flex-wrap max-w-[1200px] mx-auto text-black  pt-7">
                   <div className=" md:w-2/3 max-w-full  ">
                   <h1 className=" md:text-6xl text-4xl leading-tight capitalize font-bold not-italic mb-4 px-4">
-                    Get The{" "}
-                    <span className=" text-orange-500 break-words">Best Programming </span> Help
+                  {data.title}
                   </h1>
                   
                   <p className=" text-xl font-medium leading-9 h-auto text-justify mb-4 text-gray-700  px-5">{data.Heading}</p>
@@ -47,7 +46,7 @@ function Serviceshome() {
                    </section>
                    <section className="py-7 text-black bg-gray-300 ">
                    <div className="max-w-[1200px] mx-auto">
-                     <h1 className="text-4xl font-normal text-black text-center pb-3">
+                     <h1 className="text-5xl font-medium text-black text-center pb-5">
                       Solutions
                      </h1>
                      {

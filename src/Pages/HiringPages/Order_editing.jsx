@@ -92,7 +92,7 @@ function Order_editing() {
    }   
   const textareadesc = "Mention your topic, main idea, and requirements like tone of voice, structure, glossary, formatting style, or notes from your professor.";
   return (
-     <div className={style.Main} >
+     <div className={style.Main} id={style.bgwave}>
      <section className={style.Container}>
           <div className={style.Form_field}>
                <div className={style.heading}>

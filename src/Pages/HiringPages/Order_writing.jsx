@@ -22,20 +22,30 @@ const navigate = useNavigate()
       if(pageCount > 1){
           setPageCount(pageCount-1)
       }
+
   }
+  const [attachment,setAttachment] = useState(null)
   const [orderEditinData,setOrderEditingData] = useState({
     subject:"",
-    attachment:"",
-    instruction:"",
+     instruction:"",
     typeofpaper:"",
     others:"",
     deadline:"2024-07-01T11:35",
     pageCount:pageCount
 })     
+
+const formdatatosend = new FormData()
+formdatatosend.append('subject',orderEditinData.subject)
+formdatatosend.append('instruction',orderEditinData.instruction)
+formdatatosend.append('typeofpaper',orderEditinData.typeofpaper)
+formdatatosend.append('others',orderEditinData.others)
+formdatatosend.append('deadline',orderEditinData.deadline)
+formdatatosend.append('pageCount',orderEditinData.pageCount)
+formdatatosend.append('attachment',attachment)
 const [selectother,setSelectother] = useState(false)
 
 async function onSubmitData () {
- await axios.post('/api/orderwriting',orderEditinData)
+ await axios.post('/api/orderwriting',formdatatosend)
  .then((res)=>{
   if(res.status === 200){
     navigate('/personaldetail')
@@ -74,13 +84,15 @@ setOrderEditingData((prev)=>({
 }
 const handleSubmit = (event) =>{
 event.preventDefault()
-console.log(orderEditinData)
-onSubmitData();
+const text = "Are you Sure";
+if(confirm(text)){
+  onSubmitData();
+}
 
 }
   const textareadesc = "Mention your topic, main idea, and requirements like formatting style, references, structure, examples or notes from your professor.";
   return (
-    <div className={style.Main} >
+    <div className={style.Main} id={style.bgwave} >
       <section className={style.Container}>
            <div className={style.Form_field}>
                 <div className={style.heading}>
@@ -128,9 +140,12 @@ onSubmitData();
 
                 <div className={style.attach}>
                        <div>Attach files</div>
-                       <input type="file" name='attachment' value={orderEditinData.attachment} onChange={handleInput}/>
+                       <input type="file" name='attachment'  onChange={(e)=>setAttachment(e.target.files[0])}/>
                        </div>
-                       <h1 className=' px-3 text-orange-500'>{orderEditinData.attachment}</h1>
+                       {
+                         attachment&&
+                         <h1 className=' px-3 text-orange-500'>{attachment.name}</h1>
+                       }
                        
               <div className='block'>
                 <h1 className='text-sm py-2' >Page count</h1>

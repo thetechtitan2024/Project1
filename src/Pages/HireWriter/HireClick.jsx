@@ -2,7 +2,6 @@ import { useState } from "react";
 import write from "../../assets/Hire/write.png";
 import "./Style.css";
 import { NavLink } from "react-router-dom";
-
 function HireClick() {
   const [writing, setWriting] = useState(true);
   const [editing, setEditing] = useState(false);
@@ -30,11 +29,12 @@ function HireClick() {
       //  }
   }
   return (
-    <div className="grid lg:grid-cols-1 py-10 lg:px-3 px-10 max-w-[700px] mx-auto"  >
-      <section className="pt-20 text-black ">
-        <div className="">
+    <div className="flex w-full bg-cover h-full" id="main-page"  >
+     
+      <section className="pt-36 text-black py-10  max-w-[700px] mx-auto">
+        <div className="text-white">
           <h1 className="text-2xl font-bold "> Select Your Order Type</h1>
-          <p className="text-lg py-2 text-gray-600 ">
+          <p className="text-lg py-2 ">
             Knowing your goal allows us to find the best person for the job.
           </p>
         </div>

@@ -1,7 +1,6 @@
 import './App.css'
 import Footer from './Components/Footer/Footer'
 import Navbar from './Components/Header/Navbar'
-import Hirewiter from './Components/HireWriter/Hirewiter'
 // import Blogs from './Pages/Blogs/Blogs'
 import Ourblogs from './Pages/Blogs/Ourblogs'
 import Contact_us from './Pages/ContactUs/Contact_us'
@@ -14,6 +13,7 @@ import Home from './Pages/Home'
 import {Route, Routes} from 'react-router-dom'
 import Serviceshome from './Pages/Services/Serviceshome'
 import Blogspages from './Pages/Blogs/Pages/Blogspages'
+import HireClick from './Pages/HireWriter/HireClick'
 function App() {
   return (
     <div className=''>    
@@ -23,7 +23,7 @@ function App() {
            <Route path='/' element={<Home/>}/>
            <Route path='/*' element={<Home/>}/>
            <Route path='/contact-us' element={<Contact_us/>}/>
-           <Route path='/order' element={<Hirewiter/>}/>
+           <Route path='/order' element={<HireClick/>}/>
            <Route path='/blogs' element={<Ourblogs/>}/>
            <Route path='/order-writing' element={<Order_writing/>}/>
            <Route path='/order-technical' element={<Order_Technical/>}/>

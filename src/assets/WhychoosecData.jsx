@@ -1,10 +1,15 @@
-import plag from '../assets/plagrism.png'
-import satisfy from '../assets/satisfaction.png'
-import confident from '../assets/confidentiality.png'
-import turn from '../assets/turn.png'
-import work from '../assets/workin.png'
-import quality from '../assets/quality.png'
-
+// import plag from '../assets/plagrism.png'
+// import satisfy from '../assets/satisfaction.png'
+// import confident from '../assets/confidentiality.png'
+// import turn from '../assets/turn.png'
+// import work from '../assets/workin.png'
+// import quality from '../assets/quality.png'
+import plag from '../assets/Plagarism_Free.png'
+import writer from '../assets/Expert_Writers.png'
+import timely from '../assets/Timelydelivery.png'
+import Affort from '../assets/Affordable_Pricing.png'
+import High_Quality from '../assets/High_Qualtiy.png'
+import Support from '../assets/support.png'
 export const Choose = [
     { 
         id:1,
@@ -16,7 +21,7 @@ export const Choose = [
     },
     { 
         id:2,
-        Images:satisfy,
+        Images:writer,
         Alt:"Logos",
         heading:"Expert Writers",
         Content:" Our team of highly qualified writers brings expertise and passion to every assignment."
@@ -24,7 +29,7 @@ export const Choose = [
     },
     { 
         id:3,
-        Images:confident,
+        Images:timely,
         Alt:"Logos",
         heading:"Timely Delivery",
         Content:"Count on us to deliver your assignments on time, every time."
@@ -32,7 +37,7 @@ export const Choose = [
     },
     { 
         id:4,
-        Images:turn,
+        Images:Affort,
         Alt:"Logos",
         heading:"Affordable Pricing",
         Content:" Enjoy competitive pricing and various discounts for quality academic assistance."
@@ -41,7 +46,7 @@ export const Choose = [
     
         { 
             id:5,
-            Images:work,
+            Images:High_Quality,
             Alt:"Logos",
             heading:"High-Quality Papers",
             Content:"Receive well-researched, meticulously formatted, and professionally written content."
@@ -49,7 +54,7 @@ export const Choose = [
         },
         { 
             id:6,
-            Images:quality,
+            Images:Support,
             Alt:"Logos",
             heading:"24/7 Support",
             Content:"Our friendly support team is available around the clock to assist you."

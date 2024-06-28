@@ -5,7 +5,29 @@
     border-radius: 12px;
     margin: 12px 0;
     padding: 24px 0;
+    background-color: white;
 }
+#main-page{
+    width: 100%;
+  
+}
+#main-page::before{
+    content: "";
+    position: absolute;
+    background-repeat: no-repeat;
+    background-size: cover;
+    right: 0;
+     bottom: px;
+       left: 0;
+
+     top: 0;
+     bottom: 0;
+     z-index: -1;
+     background-image: url('../../assets/wave.jpg');
+   
+  
+}
+
 .box .icons {
     display: flex;
     justify-content: center;

@@ -168,7 +168,7 @@ function Footer() {
       </section>
       <section className="py-7 border-t-2">
        <div>
-         <ul className="flex justify-center">
+         <ul className="flex justify-center flex-wrap">
           <li className="text-sm px-2 flex flex-wrap justify-center items-center cursor-pointer gap-x-2"> <p className=" "></p> Testimonials</li>
           <li className="text-sm px-2 flex flex-wrap justify-center items-center cursor-pointer gap-x-2"> <p className=" border-r-2 h-3"></p> Terms</li>
           <li className="text-sm px-2 flex flex-wrap justify-center items-center cursor-pointer gap-x-2"> <p className=" border-r-2 h-3"></p> Privacy Policy</li>

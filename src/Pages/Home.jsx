@@ -12,8 +12,8 @@ import student from '../assets/student.png'
 import task from '../assets/task.png'
 import technical from '../assets/technical.png'
 import house from '../assets/houseprofee.png'
-import bgtestimonials  from '../assets/testimonialbg.png'
-import band from '../assets/band.jpg'
+
+import band from '../assets/Banner.jpg'
 import { Testimonials } from "../assets/Testimonials"
 import ServiceTestimoial from "./Services/Testimonial"
 import { Faqs as faq } from "../assets/Faqs"
@@ -27,8 +27,8 @@ function Home() {
     <div className="w-full relative  " id="">
   
       <Hero/>
-      <section className="bg-gray-200">
-      <div className="flex justify-center items-center py-5 pt-6 md:text-6xl text-4xl font-medium text-black "><h1 className="">Why Choose us ?</h1></div>
+      <section className="bg-white">
+      <div className="flex justify-center items-center py-5 pt-10 md:text-6xl text-4xl font-medium text-black "><h1 className="">Why Choose us ?</h1></div>
       <div className="grid lg:grid-cols-3 px-10 grid-cols-[repeat(6,minmax(350px,1fr))] auto-cols-max mb-10 gap-3 py-6 overflow-auto  max-w-[1300px] mx-auto">
       {
         Choose.map((item,i)=>{
@@ -36,7 +36,7 @@ function Home() {
         })
       }
       </div>
-      <section className="   py-10 border-y-2" style={{backgroundImage:`url(${band})`}}>
+      <section className="py-10 border-y-2" style={{backgroundImage:`url(${band})`}}>
       
         <ul className="flex flex-wrap justify-evenly py-3 max-w-[1200px] mx-auto">
           <li>
@@ -72,18 +72,18 @@ function Home() {
       </section>
       <section className="text-black bg-gray-100 py-10 ">
     
-      <h1 className="text-center text-4xl break-words font-medium pb-4"> Assignment Help in 3 Simple Steps</h1>
+      <h1 className="text-center text-6xl break-words font-medium py-4 pb-5"> Assignment Help in 3 Simple Steps</h1>
       
       <div className="grid lg:grid-cols-3 grid-cols-[repeat(3,minmax(350px,1fr))] auto-cols-max mb-10 gap-6 py-6  max-w-[1300px] mx-auto text-black overflow-x-auto md:px-20 px-3">
       {
         Offering.map((item,i)=>{
-          return   <StudentOffer key={i} Num={item.id} Heading={item.heading} Content={item.content}  />
+          return   <StudentOffer key={i} Num={item.id} Heading={item.heading} Content={item.content} image={item.image} alt={item.alt} />
           })
           }
           </div>
           </section>
 
-          <section className=" bg-no-repeat bg-cover" style={{backgroundImage:`url(${bgtestimonials})`}}>
+          <section className=" bg-no-repeat bg-cover" style={{backgroundImage:`url(${band})`}}>
           <div className="text-white text-center md:text-7xl text-4xl font-bold pt-3"> Testimonials</div>
           <Carousel transition={{ duration:1 }} loop="true" autoplay="true" className="rounded-xl w-full h-auto  pt-5 pb-12 bg-transparent"  >
           {

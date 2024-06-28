@@ -1,6 +1,7 @@
 export const ServicesDataPages = [
   {
     id: 1,
+    title:`Expert Essays  Crafted Just for You`,
     Link: "writing_essay",
     Heading: `Struggling with essay writing? Our
      professional service is here to help you craft well-researched 
@@ -36,6 +37,7 @@ export const ServicesDataPages = [
   },
   {
     id: 2,
+    title:"Your Path to a Flawless Dissertation",
     Link: "Dissertation",
     Heading: `Crafting a dissertation is a complex and time-consuming task,
      but our expert team is ready to assist you at every stage. 
@@ -72,6 +74,7 @@ export const ServicesDataPages = [
   },
   {
     id: 3,
+    title:"Professional Essay Writers at Your Service",
     Link: "Essay_Writers_for_Hiring",
     Heading: `Need professional help with your essays? Hire
      our skilled essay writers who are experts in various academic
@@ -111,6 +114,7 @@ export const ServicesDataPages = [
 
   {
     id: 4,
+    title:"Grade-Boosting Term Papers Made Easy",
     Link: "Term_Papers",
     Heading: `Term papers can be daunting, but our
      professional writing service is here to help.
@@ -148,46 +152,10 @@ export const ServicesDataPages = [
       "https://assignmentserviceaustralia.com/static/media/programming_banner.90ea545a707e39c3c042.png",
   },
   
-  {
-    id: 5,
-    Link: "essay_writing_services",
-    Heading: `Get top-quality essays by paying for professional writing 
-    services. Our expert writers are ready to create
-     well-structured and insightful essays on any topic. 
-     With our service, you can focus on other priorities while
-      we handle the writing. Experience hassle-free, reliable, 
-      and high-quality essay writing services.`,
-    Lists: [
-      {
-        heading: "Affordable Pricing:",
-        Content:
-          "Quality essays that fit your budget.",
-      },
-      {
-        heading: "Expert Writers:",
-        Content:
-          " Skilled professionals with expertise in various fields.",
-      },
-      {
-        heading: "Custom Essays on Demand: ",
-        Content: " Essays that meet your specific requirements.",
-      },
-      {
-        heading: "Secure Payment Options:",
-        Content:
-          "Easy and safe payment methods.",
-      },
-      {
-        heading: "Satisfaction Guaranteed:",
-        Content:
-          "We're not happy until you're happy. We offer revisions to ensure your complete satisfaction.",
-      },
-    ],
-    image:
-      "https://assignmentserviceaustralia.com/static/media/programming_banner.90ea545a707e39c3c042.png",
-  },
+ 
   {
     id: 6,
+    title:"Custom Research Papers Tailored to Your Needs",
     Link: "Research_Papers",
     Heading: `Research paper writing can be overwhelming, but 
     our professional service is here to make it easier. 
@@ -227,6 +195,7 @@ export const ServicesDataPages = [
 
   {
     id: 7,
+    title:"Make Your Application Shine",
     Link: "Application_Essay",
     Heading: `Stand out in your college or university application 
     with a compelling and well-crafted application essay. 
@@ -265,6 +234,7 @@ export const ServicesDataPages = [
   },
   {
     id: 8,
+    title:"Winning Scholarship Essays, Guaranteed",
     Link: "Scholarship_Essay",
     Heading: `Increase your chances of 
     winning scholarships with a powerful and
@@ -304,6 +274,7 @@ export const ServicesDataPages = [
 
   {
     id: 9,
+    title:"Comprehensive Coursework Help",
     Link: "Coursework",
     Heading: `Managing coursework can be challenging, but our
      professional writing service is here to assist you. We
@@ -342,6 +313,7 @@ export const ServicesDataPages = [
   },
   {
     id: 10,
+    title:"Perfect Your Essays with Expert Editing",
     Link: "Essay_Editing",
     Heading: `Need to refine your essay? Our professional
      editing service ensures your essay is polished, error-free,
@@ -380,6 +352,7 @@ export const ServicesDataPages = [
   },
   {
     id: 11,
+    title:"Polish Your Dissertation to Perfection",
     Link: "Dissertation_Editing",
     Heading: `Ensure your dissertation meets the highest 
     academic standards with our professional editing service.
@@ -420,6 +393,7 @@ export const ServicesDataPages = [
 
   {
     id: 12,
+    title:"Enhance Your Research Papers",
     Link: "Research_Paper_Editing",
     Heading: `Refine your research paper with our professional 
     editing service. Our experienced editors provide meticulous 
@@ -458,6 +432,7 @@ export const ServicesDataPages = [
   },
   {
     id: 13,
+    title:"Turn AI Text into Natural, Engaging Content",
     Link: "Humanize_AI_Text",
     Heading: `Transform your AI-generated text into natural, 
     engaging, and human-like content with our expert editing 
