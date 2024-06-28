@@ -17,6 +17,7 @@ import band from '../assets/Banner.jpg'
 import { Testimonials } from "../assets/Testimonials"
 import ServiceTestimoial from "./Services/Testimonial"
 import { Faqs as faq } from "../assets/Faqs"
+import style from "../CSS/Style.module.css"
 function Home() {
 
 
@@ -28,8 +29,13 @@ function Home() {
   
       <Hero/>
       <section className="bg-white">
-      <div className="flex justify-center items-center py-5 pt-10 md:text-6xl text-4xl font-medium text-black "><h1 className="">Why Choose us ?</h1></div>
-      <div className="grid lg:grid-cols-3 px-10 grid-cols-[repeat(6,minmax(350px,1fr))] auto-cols-max mb-10 gap-3 py-6 overflow-auto  max-w-[1300px] mx-auto">
+      <div className="flex flex-col justify-center items-center py- pt-10 md:text-6xl text-4xl font-medium text-black ">
+      <h1 className="">Why Choose us ?</h1>
+      <span className={style.sectiontitle_design}>
+        <span className={style.secicons}></span>
+      </span>
+      </div>
+      <div className="grid lg:grid-cols-3 px-10 grid-cols-[repeat(6,minmax(350px,1fr))] auto-cols-max mb-10 gap-3 pb-6 overflow-auto  max-w-[1300px] mx-auto">
       {
         Choose.map((item,i)=>{
           return   <WhyChoose key={i} Image={item.Images} heading={item.heading} Alt={item.heading} content={item.Content}/>
@@ -70,11 +76,15 @@ function Home() {
         </ul>
       
       </section>
-      <section className="text-black bg-gray-100 py-10 ">
-    
-      <h1 className="text-center text-6xl break-words font-medium py-4 pb-5"> Assignment Help in 3 Simple Steps</h1>
+      <section className="text-black bg-gray-100 py-9 ">
+      <div className="flex flex-col justify-center items-center md:text-6xl text-4xl font-medium text-black ">
+      <h1 className=""> Assignment Help in 3 Simple Steps</h1>
+      <span className={style.sectiontitle_design}>
+      <span className={style.secicons}></span>
+      </span>
+      </div>
       
-      <div className="grid lg:grid-cols-3 grid-cols-[repeat(3,minmax(350px,1fr))] auto-cols-max mb-10 gap-6 py-6  max-w-[1300px] mx-auto text-black overflow-x-auto md:px-20 px-3">
+      <div className="grid lg:grid-cols-3 grid-cols-[repeat(3,minmax(350px,1fr))] auto-cols-max mb-10 gap-6   max-w-[1300px] mx-auto text-black overflow-x-auto md:px-20 px-3 ">
       {
         Offering.map((item,i)=>{
           return   <StudentOffer key={i} Num={item.id} Heading={item.heading} Content={item.content} image={item.image} alt={item.alt} />
@@ -94,7 +104,7 @@ function Home() {
           </Carousel>
           </section>
           <section className="bg-white py-4">
-          <div className="text-black max-w-[1200px] mx-auto px-3 py-3" >
+          <div className="text-black max-w-[1200px] mx-auto px-3 py-3 pb-10" >
           <div className="text-black text-center pb-3 md:text-7xl text-[5vmax]  font-medium">FAQ</div>
              {
               faq.map((item,indx)=>{

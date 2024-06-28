@@ -26,7 +26,7 @@ function Serviceshome() {
               data&&
               
                 <div  className="">
-                  <section className="mt-24 flex flex-wrap max-w-[1200px] mx-auto text-black  pt-7">
+                  <section className="mt-24 flex flex-wrap max-w-[1200px] mx-auto text-black   pt-16">
                   <div className=" md:w-2/3 max-w-full  ">
                   <h1 className=" md:text-6xl text-4xl leading-tight capitalize font-bold not-italic mb-4 px-4">
                   {data.title}
@@ -46,7 +46,7 @@ function Serviceshome() {
                    </section>
                    <section className="py-7 text-black bg-gray-300 ">
                    <div className="max-w-[1200px] mx-auto">
-                     <h1 className="text-5xl font-medium text-black text-center pb-5">
+                     <h1 className="text-5xl font-medium text-black  pb-5">
                       Solutions
                      </h1>
                      {
@@ -120,7 +120,8 @@ function Serviceshome() {
           }
         </section>
         <section className="bg-white py-4">
-          <div className="text-black max-w-[1200px] mx-auto px-3 py-2">
+        <div className="text-black text-center pb-3 md:text-7xl text-[5vmax]  font-medium">FAQ</div>
+          <div className="text-black max-w-[1200px] mx-auto px-3 py-2 pb-10">
             {faq.map((item, indx) => {
               return (
                 <FAQs

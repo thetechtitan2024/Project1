@@ -6,17 +6,23 @@
      margin: 0 auto;
      
 }
-
+.sectiontitle_design{
+   display: inline-block;
+   position: relative;
+   margin-top: 16px;
+   margin-bottom: 20px;
+}
 .Main{
        padding: 130px 0 50px 0;
-   
+      
     /* background-color: #f0f8ff; */
 }
 .Form_field{
      background-color: #fff;
      margin: auto;
      max-width: fit-content;
-    ;
+     box-shadow: 10px 10px 15px -3px black ;
+     border-radius: 12px;
      padding: 30px 30px;
 }
 .heading{
@@ -35,7 +41,7 @@
     display: flex;
      }
  .Input{
-     margin: 7px 0 0 0 ;
+     margin: 0px 0 0 0 ;
     display: flex;
     height: 44px;
     border-radius: 12px;
@@ -67,9 +73,40 @@
     background-color: #fff;
     border:2px solid rgb(233 154 27/1);
     border-radius: 12px;
-    padding: 14px 15px;
+    padding: 12px 15px;
+ }
+ .secicons{
+   width: 0.5rem;
+   height: 0.5rem;
+   display: inline-block;
+   position: relative;
+   top: -35px;
+   transform: rotate(45deg);
+   background: #ec296b;
  }
 
+ .secicons::before{
+   position: absolute;
+    content: "";
+    width: 30px;
+    transform: rotate(135deg);
+    height: 2px;
+    background: #44577a;
+    left: -30px;
+    top: 21px;
+    box-sizing: border-box;
+    
+ }
+ .secicons::after {
+   position: absolute;
+    content: "";
+    transform: rotate(135deg);
+    width: 30px;
+    height: 2px;
+    background: #44577a;
+    right: -30px;
+    top: -18px
+ }
  .textarea textarea::placeholder{
    color: #212121;
    opacity:.7;
@@ -203,11 +240,10 @@
    content: "";
    position: absolute;
    background-repeat: no-repeat;
-   background-size: cover;
+   background-size:auto;
    right: 0;
     bottom:0;
-      left: 0;
-
+     left: 0;
     top: 0;
     bottom: 0;
     z-index: -1;
