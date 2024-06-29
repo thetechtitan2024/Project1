@@ -6,20 +6,20 @@ function HireClick() {
   const [writing, setWriting] = useState(true);
   const [editing, setEditing] = useState(false);
   // const [technical, setTechnical] = useState(false);
-  const [Link,setLink] = useState('/order-writing')
+  const [Link,setLink] = useState('/orderswriting/order_writing')
   const handleSelect = (name) =>{
     console.log(name)
        if(name === "writing"){
         setWriting(true)
         setEditing(false)
         // setTechnical(false)
-        setLink('/order-writing')
+        setLink('/orderswriting/order_writing')
        }
        else if(name === "editing"){
         setWriting(false)
         setEditing(true)
         // setTechnical(false)
-        setLink('/order-editing')
+        setLink('/ordersediting/order_editing')
        }
       //  else if(name === "technical"){
       //   setWriting(false)

@@ -25,10 +25,10 @@ function App() {
            <Route path='/contact-us' element={<Contact_us/>}/>
            <Route path='/order' element={<HireClick/>}/>
            <Route path='/blogs' element={<Ourblogs/>}/>
-           <Route path='/order-writing' element={<Order_writing/>}/>
+           <Route path='/orderswriting/:title' element={<Order_writing/>}/>
            <Route path='/order-technical' element={<Order_Technical/>}/>
-           <Route path='/order-editing' element={<Order_editing/>}/>
-            <Route path='/personaldetail' element={<HiringDetailForm/>}/>
+           <Route path='/ordersediting/:title' element={<Order_editing/>}/>
+            <Route path='/personaldetail/:name' element={<HiringDetailForm/>}/>
            <Route path='/order-technical/personaldetail' element={<HiringDetailForm/>}/>
            <Route path='/order-writing/personaldetail' element={<HiringDetailForm/>}/>
            <Route path='/Services/:Link' element={<Serviceshome/>} />

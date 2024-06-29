@@ -2,14 +2,17 @@ import 'react-phone-input-2/lib/style.css'
 import PhoneInput from "react-phone-input-2";
 import countryList from 'react-select-country-list'
 import { useMemo, useState } from 'react';
-import { useNavigate } from 'react-router-dom';
+import { useNavigate, useParams } from 'react-router-dom';
 import axios from 'axios'
 import style from '../../CSS/Style.module.css'
 function HiringDetailForm() {
+     const param = useParams();
       const navigate = useNavigate()
       const options = useMemo(() => countryList().getData(), [])
+      console.log(param)
     const [inputData,setInputData] = useState(
         {
+          orderid:param.name,
          firstname:"",
          lastname:"",
          email:"",

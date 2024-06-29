@@ -2,17 +2,18 @@
 
 import { useState,useEffect } from 'react';
 import style from '../../CSS/Style.module.css'
-import { NavLink, useNavigate } from 'react-router-dom'
+import { NavLink, useNavigate, useParams } from 'react-router-dom'
 import axios from 'axios';
 
 function Order_editing() {
-    
+       const param = useParams()
        const navigate = useNavigate()  
 
      const [pageCount,setPageCount] = useState(1)
      const date = new Date();
-   
+  
      const month = ["January","February","March","April","May","June","July","August","September","October","November","December"];
+     
      const [months,setmonth] = useState(date.getMonth())
      const [day,setDate] = useState(date.getDate()+1)
      const [year,setYear] = useState(date.getFullYear())
@@ -28,6 +29,7 @@ function Order_editing() {
      }
      const [images,setImages] = useState(null)
      const [orderEditinData,setOrderEditingData] = useState({
+      title:param.title,
        subject:"",
         instruction:"",     
        deadline:"2024-07-01T11:35",
@@ -40,6 +42,7 @@ function Order_editing() {
    formdata.append('deadline',orderEditinData.deadline)
    formdata.append('pageCount',orderEditinData.pageCount)
    formdata.append('attachment',images)
+   formdata.append('title',orderEditinData.title)
 
 
  console.log(images)
@@ -57,9 +60,9 @@ function Order_editing() {
         await axios.post('/api/orderediting',formdata)
         .then((res)=>{
           if(res.status === 200){
-               const text="Are you sure";
+               const text="Data Save Sucessfully";              
                if(confirm(text)){
-                    navigate('/personaldetail')
+                    navigate(`/personaldetail/${res.data.Data._id}`)
                }
           }
         }).catch((err)=>{

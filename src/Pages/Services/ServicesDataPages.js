@@ -1,3 +1,8 @@
+import Disseratation from '../../assets/Dissertation.png'
+import Termspaper from '../../assets/Terms_papers.png'
+import writeEssay from '../../assets/Write_my_essay.png'
+import writers_hiring from '../../assets/writers_hiring.png'
+
 export const ServicesDataPages = [
   {
     id: 1,
@@ -32,8 +37,7 @@ export const ServicesDataPages = [
           " Our friendly support team is always available to assist you.",
       },
     ],
-    image:
-      "https://assignmentserviceaustralia.com/static/media/programming_banner.90ea545a707e39c3c042.png",
+    image:writeEssay,
   },
   {
     id: 2,
@@ -69,8 +73,7 @@ export const ServicesDataPages = [
           "Polished, error-free dissertations that meet all academic requirements.",
       },
     ],
-    image:
-      "https://assignmentserviceaustralia.com/static/media/programming_banner.90ea545a707e39c3c042.png",
+    image:Disseratation,
   },
   {
     id: 3,
@@ -108,8 +111,7 @@ export const ServicesDataPages = [
           "Your privacy is our priority. Your information is safe with us.",
       },
     ],
-    image:
-      "https://assignmentserviceaustralia.com/static/media/programming_banner.90ea545a707e39c3c042.png",
+    image:writers_hiring,
   },
 
   {
@@ -148,8 +150,7 @@ export const ServicesDataPages = [
           "We respect your deadlines and deliver your term paper on time.",
       },
     ],
-    image:
-      "https://assignmentserviceaustralia.com/static/media/programming_banner.90ea545a707e39c3c042.png",
+    image:Termspaper,
   },
   
  

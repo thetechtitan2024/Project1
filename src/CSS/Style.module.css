@@ -241,6 +241,9 @@
    position: absolute;
    background-repeat: no-repeat;
    background-size:auto;
+   height: auto;
+   background-size: cover;
+   object-fit: cover;
    right: 0;
     bottom:0;
      left: 0;
@@ -248,7 +251,7 @@
     bottom: 0;
     z-index: -1;
     background-image: url('../assets/wave.jpg');
-  
+
  }
 .radio{
    width: 16px;

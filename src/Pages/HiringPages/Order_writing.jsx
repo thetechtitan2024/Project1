@@ -1,14 +1,14 @@
 /* eslint-disable react/no-unescaped-entities */
 import { useEffect, useState } from 'react';
 import style from '../../CSS/Style.module.css'
-import { NavLink, useNavigate } from 'react-router-dom'
+import { NavLink, useNavigate, useParams } from 'react-router-dom'
 import axios from 'axios'
 function Order_writing() {
-
+const param = useParams()
 const navigate = useNavigate()
   const [pageCount,setPageCount] = useState(1)
   const date = new Date();
-
+console.log(param)
   const month = ["January","February","March","April","May","June","July","August","September","October","November","December"];
   const [months,setmonth] = useState(date.getMonth())
   const [day,setDate] = useState(date.getDate()+1)
@@ -26,6 +26,7 @@ const navigate = useNavigate()
   }
   const [attachment,setAttachment] = useState(null)
   const [orderEditinData,setOrderEditingData] = useState({
+    title:param.title,
     subject:"",
      instruction:"",
     typeofpaper:"",
@@ -42,13 +43,16 @@ formdatatosend.append('others',orderEditinData.others)
 formdatatosend.append('deadline',orderEditinData.deadline)
 formdatatosend.append('pageCount',orderEditinData.pageCount)
 formdatatosend.append('attachment',attachment)
+formdatatosend.append('title',orderEditinData.title)
 const [selectother,setSelectother] = useState(false)
 
 async function onSubmitData () {
  await axios.post('/api/orderwriting',formdatatosend)
  .then((res)=>{
-  if(res.status === 200){
-    navigate('/personaldetail')
+   const text="Data Save Sucessfully";
+   console.log(res.data)              
+  if(confirm(text)){
+       navigate(`/personaldetail/${res.data.Data._id}`)
   }
  })
  .catch((err)=>{
