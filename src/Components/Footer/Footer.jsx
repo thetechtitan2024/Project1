@@ -39,6 +39,9 @@ function Footer() {
 
    const OnSubmit = (event) =>{
       event.preventDefault();
+      console.log(subscribe)
+      Submitdata()
+      
 
    }
 
@@ -62,7 +65,7 @@ function Footer() {
 
         }
           <div className=" basis-[8rem] flex-grow md:pl-10">
-            <h1 className="capitalize text-xl font-medium pb-1 underline  ">site map</h1>
+            <h1 className="capitalize text-xl font-medium pb-1 underline ">site map</h1>
             <ul className=" list-none ">
             
             <li className=" cursor-pointer hover:text-gray-800 text-sm opacity-80 "><NavLink reloadDocument to='/' > <button>Home</button> </NavLink></li>
@@ -96,7 +99,7 @@ function Footer() {
             // <img className="w-5" src={phone} alt="phone calls" />
             //  </span>
             }
-            <span to="tel:+911234567890" className="text-sm opacity-80">IN: +91 1234567890</span>
+            <span to="tel:+917814688725" className="text-sm opacity-80">IN: +91 78146 88725</span>
           </li>
           <li className=" cursor-pointer flex">
           {
@@ -104,7 +107,7 @@ function Footer() {
           //   <img className="w-5" src={email} alt="phone calls" />
           // </span>
         }
-          <span to="mailto:test@gmail.com" className="text-sm opacity-80">test@gmail.com</span>
+          <span to="mailto:info@worldoassignment.com" className="text-sm opacity-80">info@worldoassignment.com</span>
         </li>
         <li className=" cursor-pointer flex">
       {  
@@ -115,8 +118,8 @@ function Footer() {
       }
       </li>
               <li className="pt-1 capitalize text-xl font-medium  underline">Location</li>
-              <li className=" text-sm cursor-pointer opacity-80">30 N, Gould STE R</li>
-              <li className=" text-sm cursor-pointer opacity-80">Sheridan, WY 8201</li>
+              <li className=" text-sm cursor-pointer opacity-80">Omexe sec-49, </li>
+              <li className=" text-sm cursor-pointer opacity-80">Ludhiana Punjab</li>
             </ul>
           </div>
           <div className="flex flex-col gap-x-3  ">
@@ -134,8 +137,8 @@ function Footer() {
      />
      </div>
         </div>
-         <form className="flex "> 
-          <div className="basis-[10rem] flex-grow">
+         <form className="flex " onSubmit={OnSubmit}> 
+          <div className="basis-[10rem] flex-grow" >
             <h1 className="capitalize text-xl font-medium  underline pb-1">
               Subscribe 
             </h1>
@@ -146,6 +149,8 @@ function Footer() {
                   className="h-10 text-lg text-black px-2 w-full rounded bg-white"
                   name="Name"
                   placeholder="Your Name"
+                  value={subscribe.Name}
+                  onChange={handleData}
                 />
               </li>
               <li className=" cursor-pointer flex">
@@ -154,6 +159,8 @@ function Footer() {
                   className="h-10 text-lg text-black bg-white px-2 w-full rounded"
                   name="Email"
                   placeholder="Email"
+                  value={subscribe.Email}
+                  onChange={handleData}
                 />
               </li>
               <li className=" cursor-pointer">

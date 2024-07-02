@@ -1,6 +1,6 @@
 import './App.css'
 import Footer from './Components/Footer/Footer'
-import Navbar from './Components/Header/Navbar'
+// import Navbar from './Components/Header/Navbar'
 // import Blogs from './Pages/Blogs/Blogs'
 import Ourblogs from './Pages/Blogs/Ourblogs'
 import Contact_us from './Pages/ContactUs/Contact_us'
@@ -17,8 +17,7 @@ import HireClick from './Pages/HireWriter/HireClick'
 function App() {
   return (
     <div className=''>    
-    <Navbar/>
-  
+    
      <Routes >
            <Route path='/' element={<Home/>}/>
            <Route path='/*' element={<Home/>}/>

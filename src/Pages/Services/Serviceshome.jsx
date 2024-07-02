@@ -7,6 +7,9 @@ import { Faqs as faq } from "../../assets/Faqs";
 import { ServicesDataPages } from "./ServicesDataPages";
 import { useEffect, useState } from "react";
 import { NavLink, useParams } from "react-router-dom";
+import Navbarse from "../../Components/Header/Navbarse";
+
+
 function Serviceshome() {
   const param = useParams()
   const [data,setData]=useState(null)
@@ -19,10 +22,10 @@ function Serviceshome() {
    },[data])
   return (
     <div>
+    
+    <Navbarse/>
       <main className="">   
-          
-
-            {
+               {
               data&&
               
                 <div  className="">
@@ -45,8 +48,8 @@ function Serviceshome() {
                    </div>
                    </section>
                    <section className="py-7 text-black bg-gray-300 ">
-                   <div className="max-w-[1200px] mx-auto">
-                     <h1 className="text-5xl font-medium text-black  pb-5">
+                   <div className="max-w-[1200px] mx-auto ">
+                     <h1 className="text-5xl font-medium text-black  pb-5 underline md:px-0 pl-3">
                       Solutions
                      </h1>
                      {
@@ -59,7 +62,7 @@ function Serviceshome() {
                     //    assignment service mainly include:
                     //  </p>
                      }
-                     <ul className=" list-disc px-10 text-justify">
+                     <ul className=" list-disc px-12 text-justify ">
                      {
                       data.Lists.map((item,indx)=>{
                         return  <li key={indx} className="text-xl py-3 font-normal">
@@ -70,7 +73,7 @@ function Serviceshome() {
                      }                     
                                         
                      </ul>
-                     <p className="text-xl py-3 font-normal text-justify px-2">
+                     <p className="text-xl py-3 font-normal text-justify px-3">
                      Get in touch with us and get the best grades by getting help from
                      our programming assignment services.
                      </p>

@@ -4,6 +4,7 @@ import { useState,useEffect } from 'react';
 import style from '../../CSS/Style.module.css'
 import { NavLink, useNavigate, useParams } from 'react-router-dom'
 import axios from 'axios';
+import Navbar from '../../Components/Header/Navbar';
 
 function Order_editing() {
        const param = useParams()
@@ -95,6 +96,8 @@ function Order_editing() {
    }   
   const textareadesc = "Mention your topic, main idea, and requirements like tone of voice, structure, glossary, formatting style, or notes from your professor.";
   return (
+     <div>
+     <Navbar/>
      <div className={style.Main} id={style.bgwave}>
      <section className={style.Container}>
           <div className={style.Form_field}>
@@ -104,7 +107,7 @@ function Order_editing() {
                </div>
                <form className={style.Form} onSubmit={handleSubmit}>
               
-               <div className='pb-3'>
+               <div className='pb-1'>
                <label htmlFor="" className='text-sm '>Subject</label>
                <div className="flex">
                <input name="subject" id="" placeholder='Subjects' className={style.Input} required value={orderEditinData.subject} onChange={handleInput}/>
@@ -128,18 +131,18 @@ function Order_editing() {
                       
                       
              <div className='block'>
-               <h1 className='text-sm py-2' >Page count</h1>
-               <div className='flex gap-x-3 py-2'>
+               <h1 className='text-sm py-1' >Word count</h1>
+               <div className='flex gap-x-3 py-1'>
                <div onClick={Pagedecreament} className='py-0 px-6 text-2xl font-medium flex items-center justify-center text-orange-700 rounded-lg bg-orange-50 hover:border-2 cursor-pointer border-orange-600'>&#x2212;</div>
                <input className='py-0 px-5 text-center border-2 text-2xl font-normal w-20  bg-white text-black rounded-lg flex justify-center items-center border-orange-100' name='pageCount' value={orderEditinData.pageCount = pageCount} disabled onChange={handleInput}/>
                <div onClick={Pageincrement} className='py-0 px-6 text-2xl font-bold text-orange-700 rounded-lg bg-orange-50 hover:border-2 border-orange-600 cursor-pointer'>&#x2b;</div>
                </div>
-               <div className='border-l-2 border-orange-500 pl-3 mb-4'>
+               <div className='border-l-2 border-orange-500 pl-3 mb-2'>
                <span className='text-lg font-medium'>{pageCount}</span> <span> double-spaced pages are</span><span className='text-lg font-medium px-2'>{pageCount*275}</span><span>words.</span>
               </div>
               </div>
               <h1>deadline</h1>
-              <div className='flex  gap-3 pb-4  relative'>
+              <div className='flex  gap-3 pb-3  relative'>
                   <input type="datetime-Local"  className=' w-full h-12 bg-white px-3 border-2 border-orange-300 rounded-xl '  name='deadline' value={orderEditinData.deadline} defaultChecked={date.toISOString().split('T')[0] } onChange={handleInput}  data-last-active-input/>
       
                   </div>
@@ -161,6 +164,7 @@ function Order_editing() {
      
      </section>
    
+   </div>
    </div>
   )
 }

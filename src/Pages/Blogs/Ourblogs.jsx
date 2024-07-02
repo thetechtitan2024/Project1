@@ -1,14 +1,16 @@
 import { NavLink } from "react-router-dom"
  import { Blogsdata  } from "./Pages/BlogData"
+import Navbarse from "../../Components/Header/Navbarse"
 
 function Ourblogs() {
       
   return (
-    <div className="py-20 bg-gray-50">
+    <div className="pt-20 bg-gray-50">
+    <Navbarse/>
     <div className="text-black max-w-[1200px] mx-auto text-center text-4xl font-bold underline pb-16 py-6">
         Our Blogs
     </div>
-    <div className="grid md:grid-cols-3 max-w-[1200px] mx-auto  gap-5 md:px-0 px-2    ">
+    <div className="grid md:grid-cols-3 max-w-[1200px] mx-auto  gap-5 md:px-0 px-2  pb-10  ">
     {
         
         Blogsdata.map((item,indx)=>{

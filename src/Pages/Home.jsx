@@ -18,6 +18,7 @@ import { Testimonials } from "../assets/Testimonials"
 import ServiceTestimoial from "./Services/Testimonial"
 import { Faqs as faq } from "../assets/Faqs"
 import style from "../CSS/Style.module.css"
+import Navbar from "../Components/Header/Navbar"
 function Home() {
 
 
@@ -26,7 +27,7 @@ function Home() {
 
  return (
     <div className="w-full relative  " id="">
-  
+      <Navbar/>
       <Hero/>
       <section className="bg-white">
       <div className="flex flex-col justify-center items-center py- pt-10 md:text-6xl text-4xl font-medium text-black ">
@@ -44,7 +45,7 @@ function Home() {
       </div>
       <section className="py-10 border-y-2" style={{backgroundImage:`url(${band})`}}>
       
-        <ul className="flex flex-wrap justify-evenly py-3 max-w-[1200px] mx-auto">
+        <ul className="flex flex-wrap justify-evenly py-3 max-w-[1200px] mx-auto gap-y-8">
           <li>
           <div className="flex justify-center items-center pb-3" >
           <img src={student} alt="Student request" className=" w-16 h-16" />
@@ -78,7 +79,7 @@ function Home() {
       </section>
       <section className="text-black bg-gray-100 py-9 ">
       <div className="flex flex-col justify-center items-center md:text-6xl text-4xl font-medium text-black ">
-      <h1 className=""> Assignment Help in 3 Simple Steps</h1>
+      <h1 className="text-center"> Assignment Help in 3 Simple Steps</h1>
       <span className={style.sectiontitle_design}>
       <span className={style.secicons}></span>
       </span>

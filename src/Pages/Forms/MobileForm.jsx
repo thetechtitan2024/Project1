@@ -48,15 +48,15 @@ function MobileForm() {
 
   return (
      <div>
-         <section className="flex flex-wrap md:justify-between max-w-[900px] justify-center  mx-auto px-3 " > 
-           <div className='text-black shadow-xl rounded-xl overflow-hidden '>
+         <section className="flex flex-wrap lg:justify-between max-w-[900px] justify-center  mx-auto px-3 " > 
+           <div className='text-black shadow-xl rounded-xl overflow-hidden lg:block hidden'>
 
                   <img src={gmail} alt="" />
                 <div className='px-3'>
                 <h1 className="text-3xl font-medium py-4 border-b-2 border-black ">Get in Touch</h1>
                 <ul className='pt-4'>
-                <li className='py-1 flex items-center font-mmedium ' ><span > <img className='w-6 pr-3' src={calling} alt="" /> </span><span>+91 1234567890</span></li>
-                <li className='py-1 flex items-center font-mmedium '> <span > <img className='w-6 pr-3' src={email} alt="" /> </span><span>Test@gmail.com</span></li>
+                <li className='py-1 flex items-center font-mmedium ' ><span > <img className='w-6 pr-3' src={calling} alt="" /> </span><span>+91 7814688725</span></li>
+                <li className='py-1 flex items-center font-mmedium '> <span > <img className='w-6 pr-3' src={email} alt="" /> </span><span>info@worldoassignment.com</span></li>
                 <li className='py-1 flex items-center font-mmedium '> <span > <img className='w-6 pr-3' src={location} alt="" /> </span><span>Omexe sec-49, Ludhiana Punjab</span></li>
                 </ul>
                 </div>

@@ -5,6 +5,7 @@ import { useMemo, useState } from 'react';
 import { useNavigate, useParams } from 'react-router-dom';
 import axios from 'axios'
 import style from '../../CSS/Style.module.css'
+import Navbar from '../../Components/Header/Navbar';
 function HiringDetailForm() {
      const param = useParams();
       const navigate = useNavigate()
@@ -57,9 +58,10 @@ function HiringDetailForm() {
     }
   return (
     <div>
+    <Navbar/>
        <section className='max-w-[1200px] mx-auto py-20' id={style.bgwave }>
            <div className='text-5xl text-white text-center font-medium pb-6 underline '>Personal  Details </div>
-       <form action="" className="bg-gray-100 border-2 max-w-[600px] mx-auto text-black px-10 shadow-xl rounded-xl py-5  " onSubmit={handleSubmit}>
+       <form action="" className="bg-white border-2 max-w-[600px] mx-auto text-black px-10 shadow-xl rounded-xl py-5  " onSubmit={handleSubmit}>
        <div className="flex flex-col relative">
           <label htmlFor="" className="top-1 left-3 text-black ">First Name <span className="text-red-800">*</span></label>
           <div className="flex">

@@ -75,16 +75,16 @@ function Forms() {
             <p className="text-xl flex flex-wrap font-bold">
               Email:
               <Link
-                to="mailto: careers@globaledtechservices.com."
+                to="mailto: info@worldoassignment.com"
                 className="underline text-blue-800"
               >
-                careers@globaledtechservices.com.
+              info@worldoassignment.com.
               </Link>
             </p>
             <p className="text-xl font-bold">
               Phone: IN:
-              <Link to="tel:+919517771435 " className="underline text-blue-800">
-                +91 9517771435
+              <Link to="tel:+917814688725 " className="underline text-blue-800">
+                ++91 7814688725
               </Link>
             </p>
           </div>

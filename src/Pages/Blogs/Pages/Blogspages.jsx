@@ -4,6 +4,8 @@ import "owl.carousel/dist/assets/owl.carousel.css";
 import "owl.carousel/dist/assets/owl.theme.default.css";
 import { NavLink, useParams } from "react-router-dom";
 import { Blogsdata } from "./BlogData";
+
+import Navbarse from "../../../Components/Header/Navbarse";
 function Blogspages() {
   const param = useParams();
   const [blogs, setBlogs] = useState(null);
@@ -47,6 +49,7 @@ function Blogspages() {
 
   return (
     <div className=" mt-20 text-black reltive bg-gray-50 py-10">
+    <Navbarse/>
       {blogs ? (
         <section className="relative lg:max-w-[992px] max-w-[1200px] mx-auto my-0  block ">
           <div className="flex">
@@ -57,7 +60,7 @@ function Blogspages() {
             </NavLink>
           </div>
           {
-            <main className="py-44">
+            <main className="pt-44">
             {
 
            
@@ -147,7 +150,7 @@ function Blogspages() {
                         <div className="text-black text-xl font-medium pb-2">
                           {item.heading}
                         </div>
-                        <div className="text-black text-sm font-normal pb-3">
+                        <div className="text-black text-sm font-medium pb-3">
                           {item.Date}
                         </div>
                         <div className="flex  ">

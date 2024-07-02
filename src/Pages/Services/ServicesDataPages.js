@@ -2,6 +2,14 @@ import Disseratation from '../../assets/Dissertation.png'
 import Termspaper from '../../assets/Terms_papers.png'
 import writeEssay from '../../assets/Write_my_essay.png'
 import writers_hiring from '../../assets/writers_hiring.png'
+import Resarchediting from '../../assets/Researchpaperediting.png'
+import Research from '../../assets/Researchpapers.png'
+import application from '../../assets/ApplicationEssay.png'
+import coursework from '../../assets/Coursework.png'
+import essayEditing from '../../assets/Essayediting.png'
+import  schorship from '../../assets/ScholarshipEssay.png'
+import Disseratationediting from '../../assets/DissertationEditing.png'
+import humanlize from '../../assets/Humanizeai.png'
 
 export const ServicesDataPages = [
   {
@@ -190,8 +198,7 @@ export const ServicesDataPages = [
           "We ensure your research paper is ready when you need it.",
       },
     ],
-    image:
-      "https://assignmentserviceaustralia.com/static/media/programming_banner.90ea545a707e39c3c042.png",
+    image:Research,
   },
 
   {
@@ -230,8 +237,7 @@ export const ServicesDataPages = [
           "Quick service without compromising quality.",
       },
     ],
-    image:
-      "https://assignmentserviceaustralia.com/static/media/programming_banner.90ea545a707e39c3c042.png",
+    image:application,
   },
   {
     id: 8,
@@ -269,8 +275,7 @@ export const ServicesDataPages = [
           "Timely delivery to meet all deadlines.",
       },
     ],
-    image:
-      "https://assignmentserviceaustralia.com/static/media/programming_banner.90ea545a707e39c3c042.png",
+    image:schorship,
   },
 
   {
@@ -309,8 +314,7 @@ export const ServicesDataPages = [
           "We respect your deadlines and ensure timely submission.",
       },
     ],
-    image:
-      "https://assignmentserviceaustralia.com/static/media/programming_banner.90ea545a707e39c3c042.png",
+    image:coursework,
   },
   {
     id: 10,
@@ -348,8 +352,7 @@ export const ServicesDataPages = [
           "Timely editing to meet your deadlines.",
       },
     ],
-    image:
-      "https://assignmentserviceaustralia.com/static/media/programming_banner.90ea545a707e39c3c042.png",
+    image:essayEditing,
   },
   {
     id: 11,
@@ -388,8 +391,7 @@ export const ServicesDataPages = [
       },
     
     ],
-    image:
-      "https://assignmentserviceaustralia.com/static/media/programming_banner.90ea545a707e39c3c042.png",
+    image:Disseratationediting,
   },
 
   {
@@ -428,8 +430,7 @@ export const ServicesDataPages = [
       },
     
     ],
-    image:
-      "https://assignmentserviceaustralia.com/static/media/programming_banner.90ea545a707e39c3c042.png",
+    image:Resarchediting,
   },
   {
     id: 13,
@@ -467,7 +468,6 @@ export const ServicesDataPages = [
       },
     
     ],
-    image:
-      "https://assignmentserviceaustralia.com/static/media/programming_banner.90ea545a707e39c3c042.png",
+    image:humanlize,
   },
 ];

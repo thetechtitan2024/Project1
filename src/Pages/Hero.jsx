@@ -9,11 +9,11 @@ function Hero() {
     <div className="  bg-no-repeat bg-cover text-white"   >
     <section className="  flex  flex-col-reverse justify-center relative w-full     " >
    
-    <div className="px-4 flex flex-col justify-center relative 2xl:max-w-[1350px] xl:max-w-[1191px] lg:max-w-[95%] max-w-[95%] mx-auto pb-[390px] pt-64">
+    <div className="px-4 flex flex-col justify-center relative 2xl:max-w-[1350px] xl:max-w-[1191px] lg:max-w-[95%] max-w-[95%] mx-auto md:pb-[390px]  md:pt-64 pt-44">
     
-    <div className=" md:w-4/6  relative z-10  ">
+    <div className=" md:w-4/6  relative z-10 md:pb-0 pb-44  ">
     <p className=" font-bold md:text-6xl text-[3.5vmax]   break-words  leading-tight pb-3 ">#1 Assignment Help Services ! </p>
-    <h1 className="text-lg leading-9 text-gray-50 ">Find expert academic writers for your assignments. Get 100% plagiarism-free work. worldoassignment offers 24/7 study help at affordable prices!</h1>
+    <h1 className="text-lg md:leading-9 text-gray-50  ">Find expert academic writers for your assignments. Get 100% plagiarism-free work. WorldoAssignment offers 24/7 study help at affordable prices!</h1>
       
     <div className="text-xl pt-5  ">
     <NavLink to='order'>
@@ -50,7 +50,7 @@ function Hero() {
   
          
            <div className=" flex flex-wrap ">
-           <img src={home} alt="" className="-z-10 absolute top-0 bottom-0  left-0 right-0 object-cover w-full h-full "  />
+           <img src={home} alt="" className="-z-10 absolute top-0 bottom-0  left-0 right-0 object-cover  w-full h-full "  />
         {/*<Form/>*/}
         </div> 
            

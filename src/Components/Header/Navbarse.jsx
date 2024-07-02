@@ -9,7 +9,7 @@ import { BsCaretDownFill } from "react-icons/bs";
 import './Navlink.css'
 //flex  top-5 bg-gray-900 rounded-full h-[4vmax] py-7  px-11 z-50 items-center fixed  " :" h-[4vmax] w-full py-10 px-11 bg-transparent text-white flex items-center justify-between p-4 fixed z-50"
 
-function Navbar() {
+function Navbarse() {
   const [scroll,setScroll] = useState(false)
   const [position,setPosition] = useState(false);
   const [dropdownmenu,setDropdownmenu] = useState(true)
@@ -41,7 +41,7 @@ const dropdown =  <div className=" absolute hidden rounded w-auto px-5 justify-b
     <NavLink reloadDocument to={`/Services/Coursework`}><li className=" hover:text-orange-500 pb-2 whitespace-nowrap text-lg ">Coursework</li></NavLink>
   </ul>
 </div>
-<div>
+<div >
    <h1 className="text-xl pb-2 font-medium flex justify-between" onClick={()=>{setDropdownmenu(!dropdownmenu)}}>Editing <div className="lg:hidden">{
     !dropdownmenu?<BsCaretUpFill/>:<BsCaretDownFill/>
   }</div></h1>
@@ -85,9 +85,9 @@ const sidebar = <aside className="lg:hidden top-0 left-0 right-0 text-black mx-0
     <div className="w-full ">
      <div className="flex items-center flex-col">
   <header className={position?" z-50 h-16 fixed w-full top-5 max-w-[70%] transition-all duration-500 ease-out rounded-full bg-gray-100":"top-3 z-50 h-20 fixed w-full bg-transparent "}>
-  <nav className={position?'flex justify-between px-4 items-center h-full text-black ':"flex justify-between max-w-[1300px] mx-auto items-center h-full px-10 text-white bg-transparent"}>
+  <nav className={position?'flex justify-between px-4 items-center h-full text-black ':"flex justify-between max-w-[1300px] mx-auto items-center h-full px-10 text-black bg-transparent"}>
   <div className="flex">
-  <Link to='/' className='flex flex-wrap'><img src={worldologo} alt="worldo Assignment" className="w-96" /></Link>
+  <Link to='/' className='flex  cursor-pointer flex-wrap'><img src={worldologo} alt="worldo Assignment" className="w-96" /></Link>
   <ul className='lg:flex w-full justify-center items-center hidden gap-x-5   '>
   <NavLink reloadDocument  to='/' >
   <li  className={" cursor-pointer font medium text-xl"}>Home</li>
@@ -124,4 +124,4 @@ const sidebar = <aside className="lg:hidden top-0 left-0 right-0 text-black mx-0
 )
 }
 
-export default Navbar
+export default Navbarse

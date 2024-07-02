@@ -3,6 +3,7 @@ import { useEffect, useState } from 'react';
 import style from '../../CSS/Style.module.css'
 import { NavLink, useNavigate, useParams } from 'react-router-dom'
 import axios from 'axios'
+import Navbar from '../../Components/Header/Navbar';
 function Order_writing() {
 const param = useParams()
 const navigate = useNavigate()
@@ -96,6 +97,8 @@ if(confirm(text)){
 }
   const textareadesc = "Mention your topic, main idea, and requirements like formatting style, references, structure, examples or notes from your professor.";
   return (
+  <div>
+    <Navbar/>
     <div className={style.Main} id={style.bgwave} >
       <section className={style.Container}>
            <div className={style.Form_field}>
@@ -129,7 +132,7 @@ if(confirm(text)){
                 }
                 </div>
                 </div>
-                <div className='pb-3'>
+                <div className='pb-2'>
                 <label htmlFor="" className='text-sm'>Subject</label>
                 <div className="flex">
                 <input name="subject" id="" placeholder='Subjects' className={style.Input} required value={orderEditinData.subject} onChange={handleInput}/>
@@ -152,13 +155,13 @@ if(confirm(text)){
                        }
                        
               <div className='block'>
-                <h1 className='text-sm ' >Page count</h1>
+                <h1 className='text-sm ' >Word count</h1>
                 <div className='flex gap-x-3 py-2 pb-2'>
                 <div onClick={Pagedecreament} className='py-0 px-6 text-2xl font-medium flex items-center justify-center text-orange-700 rounded-lg bg-orange-50 hover:border-2 cursor-pointer border-orange-600'>&#x2212;</div>
                 <input className='py-0 px-5 text-center border-2 text-2xl font-normal w-20  bg-white text-black rounded-lg flex justify-center items-center border-orange-100' name='pageCount' value={orderEditinData.pageCount = pageCount} disabled onChange={handleInput}/>
                 <div onClick={Pageincrement} className='py-0 px-6 text-2xl font-bold text-orange-700 rounded-lg bg-orange-50 hover:border-2 border-orange-600 cursor-pointer'>&#x2b;</div>
                 </div>
-                <div className='border-l-2 border-orange-500 pl-3 mb-7'>
+                <div className='border-l-2 border-orange-500 pl-3 mb-3'>
                 <span className='text-lg font-medium'>{pageCount}</span> <span> double-spaced pages are</span><span className='text-lg font-medium px-2'>{pageCount*275}</span><span>words.</span>
                </div>
                </div>
@@ -185,6 +188,7 @@ if(confirm(text)){
       
       </section>
     
+    </div>
     </div>
   )
 }
