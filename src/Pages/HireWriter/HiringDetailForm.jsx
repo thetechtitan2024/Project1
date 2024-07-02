@@ -31,7 +31,7 @@ function HiringDetailForm() {
             alert('Data Save Sucessfull')
             const text="Are you Sure";
             if(confirm(text)){
-              navigate('/Pagescount')
+              navigate('/')
             }
           }else{
             alert('Somethings Wrong data Not Saved')

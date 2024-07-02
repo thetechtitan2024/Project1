@@ -68,9 +68,13 @@ const sidebar = <aside className="lg:hidden top-0 left-0 right-0 text-black mx-0
     {dropdown}
    
     </li>
-    <NavLink reloadDocument to='blogs' >
-    <li className=" cursor-pointer font medium text-lg">Blogs</li>
-    </NavLink>
+    {
+
+   
+    // <NavLink reloadDocument to='/blogs' >
+    // <li className=" cursor-pointer font medium text-lg">Blogs</li>
+    // </NavLink>
+    }
   <li className="pt-2">  <NavLink reloadDocument to='/contact-us'>
   <button className="py-2 px-3 bg-gradient-to-r from-orange-800 to-yellow-700 rounded-lg text-black text-sm  font-medium">Contact Us</button>
   </NavLink></li>
@@ -98,9 +102,11 @@ const sidebar = <aside className="lg:hidden top-0 left-0 right-0 text-black mx-0
  
     {dropdown}
   </li>
-  <NavLink reloadDocument to='blogs'>
-  <li className={" cursor-pointer font medium text-xl"}>Blogs</li>
-  </NavLink>
+  {
+  // <NavLink reloadDocument to='/blogs'>
+  // <li className={" cursor-pointer font medium text-xl"}>Blogs</li>
+  // </NavLink>
+  }
     </ul>
   </div>
   <div>

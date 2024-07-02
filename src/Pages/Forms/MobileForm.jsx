@@ -1,7 +1,7 @@
-import gmail from '../../assets/gmail.jpg'
+import gmail from '../../assets/contactus.jpg'
 import email from '../../assets/email.png'
 import calling from '../../assets/calling.png'
-import  location from '../../assets/location.png'
+// import  location from '../../assets/location.png'
 import PhoneInput from "react-phone-input-2";
 import 'react-phone-input-2/lib/style.css'
 import { useState } from 'react';
@@ -51,13 +51,15 @@ function MobileForm() {
          <section className="flex flex-wrap lg:justify-between max-w-[900px] justify-center  mx-auto px-3 " > 
            <div className='text-black shadow-xl rounded-xl overflow-hidden lg:block hidden'>
 
-                  <img src={gmail} alt="" />
+                  <img src={gmail} alt="contact us" className='w-96' />
                 <div className='px-3'>
                 <h1 className="text-3xl font-medium py-4 border-b-2 border-black ">Get in Touch</h1>
-                <ul className='pt-4'>
+                <ul className='py-4'>
                 <li className='py-1 flex items-center font-mmedium ' ><span > <img className='w-6 pr-3' src={calling} alt="" /> </span><span>+91 7814688725</span></li>
                 <li className='py-1 flex items-center font-mmedium '> <span > <img className='w-6 pr-3' src={email} alt="" /> </span><span>info@worldoassignment.com</span></li>
-                <li className='py-1 flex items-center font-mmedium '> <span > <img className='w-6 pr-3' src={location} alt="" /> </span><span>Omexe sec-49, Ludhiana Punjab</span></li>
+                {
+                //<li className='py-1 flex items-center font-mmedium '> <span > <img className='w-6 pr-3' src={location} alt="" /> </span><span>Omexe sec-49, Ludhiana Punjab</span></li>
+  }
                 </ul>
                 </div>
            </div>

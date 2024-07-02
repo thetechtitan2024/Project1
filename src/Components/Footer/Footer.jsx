@@ -76,7 +76,10 @@ function Footer() {
             </li>
        
             
-              <li className=" cursor-pointer hover:text-gray-800 text-sm opacity-80"><NavLink reloadDocument to='/blogs' > <button>Blogs</button> </NavLink></li>
+             {
+               //<li className=" cursor-pointer hover:text-gray-800 text-sm opacity-80"><NavLink reloadDocument to='/blogs' > <button>Blogs</button> </NavLink></li>
+
+             }
 
               <li className=" cursor-pointer hover:text-gray-800 text-sm opacity-80">
               <NavLink reloadDocument to='/contact-us' > <button>Contact us</button> </NavLink>
@@ -117,9 +120,11 @@ function Footer() {
         // <span to="tel:+911234567890">+91 1234567890</span>
       }
       </li>
-              <li className="pt-1 capitalize text-xl font-medium  underline">Location</li>
-              <li className=" text-sm cursor-pointer opacity-80">Omexe sec-49, </li>
-              <li className=" text-sm cursor-pointer opacity-80">Ludhiana Punjab</li>
+             { 
+              // <li className="pt-1 capitalize text-xl font-medium  underline">Location</li>
+              // <li className=" text-sm cursor-pointer opacity-80">Omexe sec-49, </li>
+              // <li className=" text-sm cursor-pointer opacity-80">Ludhiana Punjab</li>
+            }
             </ul>
           </div>
           <div className="flex flex-col gap-x-3  ">

@@ -7,7 +7,7 @@ import Navbar from '../../Components/Header/Navbar';
 function Order_writing() {
 const param = useParams()
 const navigate = useNavigate()
-  const [pageCount,setPageCount] = useState(1)
+  // const [pageCount,setPageCount] = useState(1)
   const date = new Date();
 console.log(param)
   const month = ["January","February","March","April","May","June","July","August","September","October","November","December"];
@@ -16,15 +16,15 @@ console.log(param)
   const [year,setYear] = useState(date.getFullYear())
   const [hour,setHour] = useState("11:00 AM")
   
-  const Pageincrement = () =>{
-      setPageCount(pageCount+1);
-  }
-  const Pagedecreament = () =>{
-      if(pageCount > 1){
-          setPageCount(pageCount-1)
-      }
+  // const Pageincrement = () =>{
+  //     setPageCount(pageCount+1);
+  // }
+  // const Pagedecreament = () =>{
+  //     if(pageCount > 1){
+  //         setPageCount(pageCount-1)
+  //     }
 
-  }
+  // }
   const [attachment,setAttachment] = useState(null)
   const [orderEditinData,setOrderEditingData] = useState({
     title:param.title,
@@ -33,7 +33,7 @@ console.log(param)
     typeofpaper:"",
     others:"",
     deadline:"2024-07-01T11:35",
-    pageCount:pageCount
+    pageCount:1
 })     
 
 const formdatatosend = new FormData()
@@ -157,13 +157,20 @@ if(confirm(text)){
               <div className='block'>
                 <h1 className='text-sm ' >Word count</h1>
                 <div className='flex gap-x-3 py-2 pb-2'>
-                <div onClick={Pagedecreament} className='py-0 px-6 text-2xl font-medium flex items-center justify-center text-orange-700 rounded-lg bg-orange-50 hover:border-2 cursor-pointer border-orange-600'>&#x2212;</div>
-                <input className='py-0 px-5 text-center border-2 text-2xl font-normal w-20  bg-white text-black rounded-lg flex justify-center items-center border-orange-100' name='pageCount' value={orderEditinData.pageCount = pageCount} disabled onChange={handleInput}/>
-                <div onClick={Pageincrement} className='py-0 px-6 text-2xl font-bold text-orange-700 rounded-lg bg-orange-50 hover:border-2 border-orange-600 cursor-pointer'>&#x2b;</div>
+                {
+                  // <div onClick={Pagedecreament} className='py-0 px-6 text-2xl font-medium flex items-center justify-center text-orange-700 rounded-lg bg-orange-50 hover:border-2 cursor-pointer border-orange-600'>&#x2212;</div>
+              }
+                <input className='py-0 px-5 text-center border-2 text-2xl font-normal w-44  bg-white text-black rounded-lg flex justify-center items-center border-orange-100' name='pageCount' value={orderEditinData.pageCount }  onChange={handleInput}/>
+                {
+                  //<div onClick={Pageincrement} className='py-0 px-6 text-2xl font-bold text-orange-700 rounded-lg bg-orange-50 hover:border-2 border-orange-600 cursor-pointer'>&#x2b;</div>
+                  }
                 </div>
-                <div className='border-l-2 border-orange-500 pl-3 mb-3'>
-                <span className='text-lg font-medium'>{pageCount}</span> <span> double-spaced pages are</span><span className='text-lg font-medium px-2'>{pageCount*275}</span><span>words.</span>
-               </div>
+
+               { 
+              //   <div className='border-l-2 border-orange-500 pl-3 mb-3'>
+              //   <span className='text-lg font-medium'>{pageCount}</span> <span> double-spaced pages are</span><span className='text-lg font-medium px-2'>{pageCount*275}</span><span>words.</span>
+              //  </div>
+              }
                </div>
                <h1>deadline</h1>
                <div className='flex  gap-3 pb-3  relative'>
